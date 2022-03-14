@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from 'src/app/shared/alert/services/alert.service';
 
 @Component({
   selector: 'app-layout',
@@ -7,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
 
   ngOnInit(): void {
   }

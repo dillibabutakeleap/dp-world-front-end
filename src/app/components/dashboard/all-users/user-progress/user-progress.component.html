@@ -1,0 +1,209 @@
+<div class="wrapper overflow-auto m-0 py-3">
+    <div class="px-5 col-12 d-flex flex-column">
+        <span class="text-dark pb-2 ">Users</span>
+        <div class="card-wrapper bg-white col-12 px-5 py-3">
+            <h2 class="mb-2 back text-light text-dark pointer" [routerLink]="['../../']">
+                <mat-icon [svgIcon]="'heroicons_outline:arrow-sm-left'" class="text-dark"></mat-icon> Back
+            </h2>
+            <hr class="m-0">
+            <div class="my-3 d-flex justify-content-between">
+                <h2 class="col m-0 back text-dark">User's Progress</h2>
+                <div class="col-3 row d-inline-flex align-items-center justify-content-center flex-row">
+                    <div class="w-auto d-inline-flex align-items-center" style="height:15px;" on>
+                        <div class="office-box "></div>
+                        <span class="text-dark ms-2">OFFICE</span>
+                    </div>
+                    <div class="w-auto d-inline-flex align-items-center" style="height:15px;">
+                        <div class="substation-box "></div>
+                        <span class="text-dark ms-2">SUB-STATION</span>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="m-0 ">
+            <table class="table table-borderless my-2">
+                <thead>
+                    <tr class="my-2">
+                        <th scope="col"></th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Progress</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="align-middle " scope="row">
+                            <mat-icon [svgIcon]="'custom_solid:profile-colored'" style="width:34px;height:34px">
+                            </mat-icon>
+                        </th>
+                        <td class="align-middle "><span
+                                class="text-highlight text">{{data&&data.user?data.user.name:'-'}}</span>
+                        </td>
+                        <td class="align-middle "><span class=" text">{{data&&data.user?data.user.email:'-'}}</span>
+                        </td>
+                        <td class="align-middle "><span class=" text">{{data&&data.user? ('Active Since
+                                ('+(data.user.createdAt | date:'dd/MM/YYYY')+')'):'-'}}</span>
+                        </td>
+                        <td class="align-middle ">
+                            <div class="row d-flex justify-content-start">
+                                <div
+                                    class=" progress-bar-holder d-inline-flex justify-content-between align-items-center ms-0 me-auto">
+                                    <div class="col d-inline-flex flex-row">
+                                        <div class="progress ">
+                                            <div class="progress-bar" role="progressbar"
+                                                [ngStyle]="{'width': (data&&data.user&&data.user.userProgressData?data.user.userProgressData['OFFICE']:0)+'%'}"
+                                                aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress ">
+                                            <div class="progress-bar substation-bg" role="progressbar"
+                                                [ngStyle]="{'width': (data&&data.user&&data.user.userProgressData?data.user.userProgressData['SUB-STATION']:0)+'%'}"
+                                                aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="col text-dark d-inline-flex align-items-center ps-2 text-highlight">{{data&&data.user?(getUserOverallProgress(data.user)
+                                        | number : '.2-2'):''}}%</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle ">
+                            <span class="text-highlight text pointer" *ngIf="data && data.user"
+                                (click)="onTransferLicenseClick(data.user)">
+                                <mat-icon [svgIcon]="'heroicons_solid:pencil'"></mat-icon>
+                                Edit & Transfer
+                            </span>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="score-card  col-12 ">
+                <div class="card-content ">
+                    <div class="flex row m-0">
+                        <div class="col-6 py-2 m-0 d-inline-flex align-items-center justify-content-center pointer"
+                            (click)="onNavItemClick(0)" [ngClass]="selectedIndex==1?'selected':''">
+                            <h3 class="mb-0">OFFICE</h3>
+                        </div>
+                        <div (click)="onNavItemClick(1)"
+                            class="col-6 py-2 substation d-inline-flex align-items-center justify-content-center pointer"
+                            [ngClass]="selectedIndex==0?'selected':''">
+                            <h3 class="mb-0">SUB-STATION</h3>
+                        </div>
+                    </div>
+                    <div class="flex justify-content-around py-3 row">
+                        <div
+                            class="col-4 text-center d-flex text-dark light-bold align-items-center justify-content-center">
+                            <span>{{selectedIndex==0?'Office':'Sub-Station'}}
+                                Overall Progress</span>
+                        </div>
+                        <div class="col-4">
+                            <div class="">
+                                <div>
+                                    <span class="first-aid-color">First Aid</span>
+                                </div>
+                                <div class="d-inline-flex flex-row col-12">
+                                    <div class="progress col-8">
+                                        <div class="progress-bar first-aid-bg" role="progressbar"
+                                            [ngStyle]="{'width': (selectedIndex==0?(data&&data.progressData&&data.progressData['OFFICE']['FIRST AID'] ?data.progressData['OFFICE']['FIRST AID'].progress:0)
+                                            :(data&&data.progressData&&data.progressData['SUB-STATION']['FIRST AID'] ?data.progressData['SUB-STATION']['FIRST AID'].progress:0))+'%'}"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 ms-2 first-aid-color">
+                                        <span>{{(selectedIndex==0?(data&&data.progressData
+                                            ?data.progressData['OFFICE']['FIRST AID'].progress:0)
+                                            :(data&&data.progressData&&data.progressData['SUB-STATION']['FIRST AID']
+                                            ?data.progressData['SUB-STATION']['FIRST AID'].progress:0)) | number :
+                                            '.2-2'}}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="my-2">
+                                <div>
+                                    <span class="fire-safety-color">Fire Safety</span>
+                                </div>
+                                <div class="d-inline-flex flex-row col-12">
+                                    <div class="progress col-8">
+                                        <div class="progress-bar fire-safety-bg" role="progressbar"
+                                            [ngStyle]="{'width': (selectedIndex==0?(data&&data.progressData &&data.progressData['OFFICE']['FIRE SAFETY']?data.progressData['OFFICE']['FIRE SAFETY'].progress:0)
+                                            :(data&&data.progressData &&data.progressData['SUB-STATION']['FIRE SAFETY']?data.progressData['SUB-STATION']['FIRE SAFETY'].progress:0))+'%'}"
+                                            aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 ms-2">
+                                        <span
+                                            class="fire-safety-color">{{selectedIndex==0?(data&&data.progressData&&data.progressData['OFFICE']['FIRE
+                                            SAFETY']?data.progressData['OFFICE']['FIRE SAFETY'].progress:0)
+                                            :(data&&data.progressData ?data.progressData['SUB-STATION']['FIRE
+                                            SAFETY'].progress:0) | number : '.2-2'}}%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0 col-12 flex">
+                        <div class="col-2 p-0 progress-nav-holder" style="width:3rem">
+                            <div class=" d-flex justify-content-center text-nowrap align-items-center   pointer"
+                                style="min-height:50%"
+                                [ngClass]="selectedSideNavIndex==0?'first-aid-selected-bg':'progress-nav'"
+                                (click)="onSideNavClick(0)">
+                                <span class="progress-nav-text  "
+                                    [ngClass]="selectedSideNavIndex==0?'first-aid-selected-color':'progress-nav-text-color'">FIRST
+                                    AID</span>
+                            </div>
+                            <div class=" d-flex justify-content-center text-nowrap  align-items-center  pointer"
+                                style="min-height:50%" (click)="onSideNavClick(1)"
+                                [ngClass]="selectedSideNavIndex==1?'fire-safety-selected-bg':'progress-nav'"><span
+                                    class="progress-nav-text  "
+                                    [ngClass]="selectedSideNavIndex==1?'fire-safety-selected-color':'progress-nav-text-color'">FIRE
+                                    SAFETY</span></div>
+                        </div>
+                        <div class="col-10">
+                            <table class="table table-borderless my-2"
+                                *ngFor="let gameStage of 
+                            selectedIndex==0?(selectedSideNavIndex==0?
+                            (data&&data.progressData ?data.progressData['OFFICE']['FIRST AID'].gameStages:[]):(data&&data.progressData ?data.progressData['OFFICE']['FIRE SAFETY'].gameStages:[])):
+                            ((selectedSideNavIndex==0?
+                            (data&&data.progressData ?data.progressData['SUB-STATION']['FIRST AID'].gameStages:[]):(data&&data.progressData &&data.progressData['SUB-STATION']['FIRE SAFETY']?data.progressData['SUB-STATION']['FIRE SAFETY'].gameStages:[])))">
+                                <thead>
+                                    <tr class="my-2">
+                                        <th scope="col" style="text-align:left !important">{{gameStage.title}}</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Time Duration</th>
+                                        <th scope="col">Completed Session</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let gameLevel of gameStage.gameLevels">
+                                        <td class="align-middle text-left row-text  col-3"
+                                            style="text-align:left !important"><span
+                                                class="tex-left">{{gameLevel.title}}</span>
+                                        </td>
+                                        <td class="align-middle col-3" scope="row">
+                                            <mat-icon *ngIf="gameLevel.isCompleted" [svgIcon]="'custom_solid:success'"
+                                                style="width:24px;height:24px">
+                                            </mat-icon>
+                                        </td>
+                                        <td class="align-middle col-3"><span class="row-text"> {{
+                                                gameLevel.timeDurationInSec?timeMask(gameLevel.timeDurationInSec):'-'
+                                                }}</span>
+                                        </td>
+                                        <td class="align-middle row-text">
+                                            {{gameLevel?.noOfTimesCompleted||'-'}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

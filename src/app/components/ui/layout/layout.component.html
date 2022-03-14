@@ -1,7 +1,8 @@
-<div class="wrapper">
-  <app-side-menu-bar></app-side-menu-bar>
-  <app-header class="top-nav-bar"></app-header>
-  <div class="body-content" id="body-content">
-    <router-outlet></router-outlet>
-  </div>
+<div class=" position-relative">
+    <app-sidebar></app-sidebar>
+    <div class="content">
+        <app-top-header-nav></app-top-header-nav>
+        <app-alert></app-alert>
+        <router-outlet></router-outlet>
+    </div>
 </div>

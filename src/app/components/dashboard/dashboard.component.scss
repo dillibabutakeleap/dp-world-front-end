@@ -1,0 +1,144 @@
+.wrapper {
+  height: calc(100vh - 4rem);
+  width: 100%;
+  background: #e5e5e5;
+  margin: 0;
+}
+
+.card {
+  background: #f4f4f4;
+  // height: 50% !important;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  margin: auto !important;
+  border-radius: 0.8rem !important;
+  border: none !important;
+}
+
+.card-heading {
+  color: #707070 !important;
+}
+.link {
+  color: #53bad4;
+  font-weight: 500;
+  //   font-weight: bolder !important;
+}
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.gray-round {
+  background-color: #b5b5b5;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.card-content {
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  bottom: 10px;
+}
+
+.name-round {
+  background-color: #53bad4;
+  height: 35px !important;
+  width: 35px !important;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+  color: #fff !important;
+}
+
+.card-content {
+  min-height: 10rem !important;
+}
+
+.cost {
+  font: normal normal normal 33px/43px Roboto;
+  letter-spacing: 0px;
+  color: #707070;
+}
+
+.link-success {
+  color: #4ca98b;
+  font-weight: 500;
+}
+
+.link-success:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.round {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.p-title {
+  font-size: 2rem;
+  color: #53bad4;
+}
+.p-description {
+  color: #b5b5b5;
+}
+
+.licensed-users {
+  background: #f6fbf9;
+}
+
+.vr-sessions {
+  background: #f3f6fb;
+}
+.screen-time {
+  background: #f6fcfd;
+}
+
+.cm {
+  width: 2% !important;
+}
+.hr {
+  border-right: 1px solid #B1B1B1;
+  height: 70% !important;
+  max-width: 10px;
+}
+.cl {
+  width: 49% !important;
+}
+.cr {
+  width: 49% !important;
+}
+
+.sub-heading {
+  color: #53bad4;
+}
+
+.first-aid-square {
+  height: 10px;
+  width: 10px;
+  background: #65c1d8;
+  line-height: 16px;
+
+}
+.fire-safety-square {
+  height: 10px;
+  width: 10px;
+  background: #35AAF8;
+}
+
+.uncompleted-square {
+  height: 10px;
+  width: 10px;
+  background: #D0D0D0;
+}

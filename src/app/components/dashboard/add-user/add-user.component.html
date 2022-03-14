@@ -1,0 +1,54 @@
+<div class="wrapper d-flex  row flex-row justify-content-center gap-4 gap-sm-0 m-0">
+    <div class="card col-12 col-sm-10 " [ngClass]="teamUserId?' col-md-4':'col-md-7'">
+        <div class="card-content m-3">
+            <div class=" row justify-content-between">
+                <div [ngClass]="teamUserId?'col-12':'col-6'">
+                    <label class="mat-h2 mt-2">Add User</label>
+                    <form class=" mt-1" [ngClass]="teamUserId?'col-12':'col-10'" [formGroup]="dataForm">
+                        <div class="form-group mt-0">
+                            <label for="nameInput">Full Name</label>
+                            <input type="text" class="form-control" id="nameInput" formControlName="name"
+                                [ngClass]="{'is-invalid': dataForm.get('name')?.touched && dataForm.get('name')?.invalid}">
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" formControlName="email"
+                                [ngClass]="{'is-invalid': dataForm.get('email')?.touched && dataForm.get('email')?.invalid}">
+                            <small id="emailHelp" class="form-text help-text">This email will be assigned to user for
+                                login.</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-6" *ngIf="!teamUserId">
+                    <div class="mt-2">
+                        <span class="text-highlight">*Please note that you can transfer this user license if the
+                            following
+                            criteria below has met.</span>
+                        <div class="mt-4 para">
+                            <span class="sub-heading">Criteria for user license transfer.</span>
+                            <p class="mb-0 mt-2">- Maybe only allow 1-2 transfer of license to another user</p>
+                            <p class="mb-0">- Cannot happen after 3 months of usage</p>
+                            <p class="mb-0">- Cannot happen if more than 50% of the course is completed</p>
+                            <p class="mb-0">- If the course is 80% completed, the same license game progress cannot be
+                                restarted more than twice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-4 text-center">
+                <div>
+                    <div class="col-12">
+                        <span class="text-highlight">*This user will receive a mail to create their password to
+                            log-in.</span>
+                    </div>
+                    <button class="btn btn-buy px-4 py-2 mt-4" (click)="onAddUserClick()" *ngIf="!teamUserId">ADD
+                        USER</button>
+                    <button class="btn btn-buy px-4 py-2 mt-4" (click)="onTransferLicenseClick()" *ngIf="teamUserId">TRANSFER
+                        LICENSE</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

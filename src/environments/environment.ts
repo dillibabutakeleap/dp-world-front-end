@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_endpoint: 'https://asdda.free.beeceptor.com',
+  backendUrl: 'http://localhost:3000',
 };
 
 /*

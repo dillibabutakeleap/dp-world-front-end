@@ -1,0 +1,38 @@
+.sidebar {
+  background: #444547;
+  height: 100vh;
+  width: 14rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.text {
+  color: #dbdbdb;
+}
+.menu-item {
+  margin-top: 1rem;
+  padding-bottom: 15px;
+}
+hr {
+  background: #696a6c;
+  width: 100% !important;
+  height: 1px;
+  margin: 0 !important;
+}
+
+.menu-items-group {
+  position: relative;
+  padding-top: 2rem;
+  height: calc(100% - 5rem);
+}
+
+.menu-item-wrapper:hover,
+.active {
+  background: #696a6c;
+}
+.logout {
+  position: absolute;
+  bottom: 1rem !important;
+  right: 0;
+  left: 0 !important;
+}

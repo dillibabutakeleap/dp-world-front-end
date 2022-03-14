@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <div class="px-5 col-12 d-flex flex-column">
+        <span class="text-dark pb-2 ">Billing</span>
+        <div class="card bg-white col-12 px-5 py-3">
+            <div *ngIf="activeSubscription">
+                <h1 class="mb-2 text-dark">Manage your Billing</h1>
+                <hr class="m-0">
+                <div class="py-5 container  col-12  ">
+                    <div class="row">
+                        <div class="col d-flex justify-content-start ms-0 me-auto " style="max-width:7rem">
+                            <mat-icon [svgIcon]="'custom_solid:billing-2'" style="height:3rem; width:3rem;"></mat-icon>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-center align-items-center ">
+                            <div class="text-start">
+                                <p class="text-dark">Estimated upcoming bill on
+                                    {{activeSubscription?(activeSubscription.endDate | date:'mediumDate'):''}}</p>
+                                <span
+                                    class="price">${{activeSubscription?(activeSubscription.subscription.finalPrice/100):''}}</span>
+                            </div>
+                        </div>
+                        <div class="col d-flex flex-column justify-content-center align-items-center">
+                            <div class="text-start">
+                                <span class="price">{{activeSubscription.noOfLicenses}}</span>
+                                <p class="text-dark mt-2 mb-0">Licenses</p>
+                            </div>
+                        </div>
+                        <div class="col d-flex justify-content-end align-items-center">
+                            <button class="btn btn-success" [routerLink]="['/subscriptions']">
+                                <mat-icon [svgIcon]="'heroicons_outline:arrow-sm-up'"></mat-icon>
+                                Upgrade License
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr class="m-0">
+                <div class="py-3 d-flex justify-content-end">
+                    <a href="javascript:void(0)" class="link text-decoration-none mx-2"> Payment Accounts</a>
+                    <a href="javascript:void(0)" class="link text-decoration-none mx-2"> Check more services</a>
+                </div>
+            </div>
+            <div *ngIf="!activeSubscription">
+                <h3 class="text-center m-0">No Active Subscription</h3>
+                <div class="text-center">
+                    <a class=" link py-3" href="javascripti:void(0)" [routerLink]="['/subscriptions']">Get
+                        Subscription</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

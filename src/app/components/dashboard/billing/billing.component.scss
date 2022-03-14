@@ -1,0 +1,28 @@
+.wrapper {
+  height: calc(100vh - 4rem);
+  width: 100%;
+  background: #e5e5e5;
+  margin: 0;
+}
+
+.card {
+  background: #f4f4f4;
+  // height: 50% !important;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  margin: auto !important;
+  border-radius: 0.8rem !important;
+  border: none !important;
+}
+
+hr {
+  background: #b1b1b1;
+}
+
+.price {
+  color: #4ca98b;
+  font-size: 2rem;
+}
+.link{
+  color:#4CA98B;
+  font-weight: 500;
+}

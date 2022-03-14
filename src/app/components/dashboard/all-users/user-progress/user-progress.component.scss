@@ -1,0 +1,198 @@
+.card-wrapper {
+  background: #f4f4f4;
+  height: auto !important;
+  margin: auto !important;
+  border-radius: 1rem !important;
+  border: none !important;
+}
+
+.card-heading {
+  color: #f4f4f4 !important;
+}
+.wrapper {
+  height: calc(100vh - 4rem);
+  width: 100%;
+  background: #e5e5e5;
+  margin: 0;
+}
+.divider {
+  border-right: 1.5px solid #cfcfcf;
+  height: 1.3rem;
+  width: 5px;
+  margin-right: 20.8px;
+}
+.heading-wrapper {
+  height: 2rem;
+}
+
+.heading {
+  color: #9a9a9a;
+  font-weight: 500;
+}
+.link {
+  color: #53bad4;
+  font-weight: 500;
+  //   font-weight: bolder !important;
+}
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-highlight {
+  color: #53bad4 !important;
+  line-height: 24px;
+}
+thead th {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid #f0f0f0;
+  font-weight: 100 !important;
+  font-size: 1rem;
+  color: #000000 !important;
+}
+
+.text {
+  color: #707070;
+}
+
+th {
+  color: #9a9a9a !important;
+  font-weight: 500;
+  text-align: center !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+td {
+  text-align: center !important;
+}
+.progress {
+  min-width: 4rem;
+  border-radius: 0 !important;
+}
+.progress-bar-holder {
+  min-width: 9rem;
+}
+.progress-bar {
+  background-color: #53bad4;
+}
+
+.name-round {
+  background-color: #53bad4;
+  height: 35px !important;
+  width: 35px !important;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+  color: #fff !important;
+}
+
+.license-count {
+  color: #53bad4;
+  font-size: 2rem;
+}
+
+.office-box {
+  height: 15px;
+  width: 15px;
+  background-color: #65c1d8;
+}
+
+.substation-box {
+  height: 15px;
+  width: 15px;
+  background-color: #35aaf8;
+}
+
+.substation-bg {
+  background-color: #35aaf8;
+}
+
+.back {
+  font-weight: 300;
+}
+
+.selected {
+  background-color: #ebebeb;
+}
+
+.score-card {
+  background: #fafafa;
+  height: auto !important;
+  margin: auto !important;
+  border-radius: 0.25rem !important;
+  border: none !important;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+.substation {
+  border-top-right-radius: 0.25rem;
+}
+.office {
+  border-top-left-radius: 0.25rem;
+}
+.light-bold {
+  font-weight: 500;
+}
+
+.first-aid-color {
+  color: #8dddff;
+  font-weight: 600;
+}
+
+.first-aid-bg {
+  background: #8dddff;
+}
+
+.fire-safety-color {
+  color: #fcbdbd;
+  font-weight: 600;
+}
+
+.fire-safety-bg {
+  background: #fcbdbd;
+}
+
+.progress-nav-holder {  
+  min-height: 25rem;
+}
+
+.progress-nav {
+  background: #ececec;
+  min-height: 50% !important;
+}
+.first-aid-selected-bg {
+  background: #d9eef7;
+}
+.first-aid-selected-color {
+  color: #1e96b4;
+  font-weight: 500;
+}
+
+.progress-nav-text {
+  transform: rotate(90deg);
+}
+.progress-nav-text-color {
+  color: #b5b5b5;
+  font-weight: 500;
+}
+
+.fire-safety-selected-bg {
+  background: #F7D9D9;
+}
+.fire-safety-selected-color {
+  color: #eb5555;
+  font-weight: 500;
+}
+
+.row-text{
+    color: #B5B5B5;
+    font-weight: 400;
+}
+
+// th{
+//     text-align: left !important;
+//   }

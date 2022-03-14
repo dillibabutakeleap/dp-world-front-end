@@ -1,0 +1,44 @@
+.wrapper {
+  // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background: #e5e5e5;
+  margin: 0;
+}
+.back-btn-bg {
+  background: #53bad4;
+  height: 4rem !important;
+  width: 4rem !important;
+  display: inline-flex !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+}
+
+::ng-deep.profile-menu {
+  border-radius: 15px !important;
+  background-color: #ddf1f6 !important;
+}
+
+.name {
+  min-width: 15rem !important;
+  font-size: 1.2rem;
+  text-align: end !important;
+  color: #707070;
+}
+.email {
+  min-width: 15rem !important;
+  font-size: 1rem;
+  text-align: end !important;
+  color: #707070;
+}
+
+::ng-deep.mat-menu-panel {
+  min-width: 10rem !important;
+}
+
+.btn-signout {
+  background: #f6787a !important;
+  border: 1px solid #ff6063 !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+}

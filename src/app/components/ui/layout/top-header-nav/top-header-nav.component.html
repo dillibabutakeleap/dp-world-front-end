@@ -1,0 +1,19 @@
+<div class="col-12 d-flex justify-content-end pe-5  align-items-center wrapper" style="height:4rem">
+
+    <div>
+        <span class="pointer pe-3">
+            <mat-icon [svgIcon]="'custom_solid:notification-bell'"></mat-icon>
+        </span>
+        <mat-icon [svgIcon]="'custom_solid:Profile'" style="height:30px; width:30px;cursor: pointer;"
+            [matMenuTriggerFor]="menu">
+        </mat-icon>
+        <mat-menu #menu="matMenu" class="profile-menu text-end">
+            <div class="my-3 mx-2">
+                <div class="mt-4"><span class="name ms-auto me-0 mt-4">{{userDetails.name}}</span></div>
+                <div class="mt-1"><span class="email ms-auto me-0 mt-4">{{userDetails.email}}</span></div>
+                <button class="btn btn-signout px-4 mt-4" (click)="onLogoutClick()">Sign Out</button>
+            </div>
+        </mat-menu>
+
+    </div>
+</div>

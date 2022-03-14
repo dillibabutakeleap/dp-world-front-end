@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <svg id="dashboard" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path id="Path_24" data-name="Path 24"
+                  d="M265,180h-2v10h2Zm-5,12v6h3v6h2v-6h3v-6Zm6,4h-4v-2h4Zm-9-16h-2v3h2Zm3,5h-8v6h3v13h2V191h3Zm-2,4h-4v-2h4Zm-9-9h-2v14h2Zm-5,22h3v2h2v-2h3v-6h-8Zm2-4h4v2h-4Z"
+                  transform="translate(-244 -180)" fill="#fff"/>
+        </svg>
+
+        <svg id="shift-data" xmlns="http://www.w3.org/2000/svg" width="24" height="19" viewBox="0 0 24 19">
+            <path id="Path_23" data-name="Path 23"
+                  d="M209,86v2h3.586l-8.727,8.728-3-3-5.565,5.565,1.414,1.414,4.151-4.151,3,3L210,93.414V103H194V91h12.016l2-2H192v16h20V91.414l2-2V93h2V86Z"
+                  transform="translate(-192 -86)" fill="#fff"/>
+        </svg>
+        <svg id="master-data" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22">
+            <g id="Group_9" data-name="Group 9" transform="translate(-36 -38)">
+                <g id="Group_4" data-name="Group 4">
+                    <path id="Path_25" data-name="Path 25" d="M60,60H36V43H52v2H38V58H58.007V38H60Z" fill="#fff"/>
+                </g>
+                <g id="Group_5" data-name="Group 5">
+                    <rect id="Rectangle_4" data-name="Rectangle 4" width="1.993" height="13"
+                          transform="translate(54.007 43)" fill="#fff"/>
+                </g>
+                <g id="Group_6" data-name="Group 6">
+                    <rect id="Rectangle_5" data-name="Rectangle 5" width="1.993" height="5"
+                          transform="translate(50.007 51)" fill="#fff"/>
+                </g>
+                <g id="Group_7" data-name="Group 7">
+                    <rect id="Rectangle_6" data-name="Rectangle 6" width="3.993" height="2"
+                          transform="translate(40.007 47)" fill="#fff"/>
+                </g>
+                <g id="Group_8" data-name="Group 8">
+                    <rect id="Rectangle_7" data-name="Rectangle 7" width="7.993" height="2"
+                          transform="translate(40.007 51)" fill="#fff"/>
+                </g>
+            </g>
+        </svg>
+        <svg id="work-order" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g id="Group_206" data-name="Group 206" transform="translate(-244 -180)">
+                <path id="Path_154" data-name="Path 154"
+                      d="M268,180H250v6h-6v18h18v-6h6Zm-8,22H246V188h4v10h10Zm6-6H252V182h14Z" fill="#fff"/>
+                <path id="Path_155" data-name="Path 155" d="M258,194h2v-4h4v-2h-4v-4h-2v4h-4v2h4Z" fill="#fff"/>
+            </g>
+        </svg>
+        <svg id="site-name" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22">
+            <path id="Path_60" data-name="Path 60"
+                  d="M244,37V59h24V37Zm10,20h-8V47h8Zm12,0H256V47h10Zm0-12H246V39h20Zm-2-4H254v2h10Zm-12,0h-4v2h4Zm0,8h-4v2h4Zm0,4h-4v2h4Zm6.707,2.707L261,53.414l2.293,2.293,1.414-1.414L262.414,52l2.293-2.293-1.414-1.414L261,50.586l-2.293-2.293-1.414,1.414L259.586,52l-2.293,2.293Z"
+                  transform="translate(-244 -37)" fill="#fff"/>
+        </svg>
+        <svg id="download" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22">
+            <g id="Group_198" data-name="Group 198" transform="translate(-244 -86)">
+                <path id="Path_150" data-name="Path 150"
+                      d="M263.069,96.369l-1.414-1.414L257,99.612l0-8.938h-2l0,8.938-4.653-4.653-1.414,1.414L256,103.44Z"
+                      transform="translate(0 -0.753)" fill="#fff"/>
+                <path id="Path_151" data-name="Path 151" d="M252,85v2h-5v5.842h-2V85Z" transform="translate(-1 1)"
+                      fill="#fff"/>
+                <path id="Path_152" data-name="Path 152" d="M267,85v7.842h-2V87h-5V85Z" transform="translate(1 1)"
+                      fill="#fff"/>
+                <rect id="Rectangle_77" data-name="Rectangle 77" width="12" height="2" transform="translate(250 106)"
+                      fill="#fff"/>
+            </g>
+        </svg>
+
+        <svg id="logout" xmlns="http://www.w3.org/2000/svg" width="19.98" height="22.54" viewBox="0 0 19.98 22.54">
+            <g id="Group_18" data-name="Group 18" transform="translate(-271.532 -133.23)">
+                <path id="Path_34" data-name="Path 34"
+                      d="M285.812,136.75v2.48a7.83,7.83,0,1,1-8.58,0v-2.48a9.99,9.99,0,1,0,8.58,0Z" fill="#fff"/>
+                <g id="Group_17" data-name="Group 17">
+                    <rect id="Rectangle_15" data-name="Rectangle 15" width="2" height="9.674"
+                          transform="translate(280.523 133.23)" fill="#fff"/>
+                </g>
+            </g>
+        </svg>
+        <svg id="site-name" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22">
+            <path id="Path_60" data-name="Path 60"
+                  d="M244,37V59h24V37Zm10,20h-8V47h8Zm12,0H256V47h10Zm0-12H246V39h20Zm-2-4H254v2h10Zm-12,0h-4v2h4Zm0,8h-4v2h4Zm0,4h-4v2h4Zm6.707,2.707L261,53.414l2.293,2.293,1.414-1.414L262.414,52l2.293-2.293-1.414-1.414L261,50.586l-2.293-2.293-1.414,1.414L259.586,52l-2.293,2.293Z"
+                  transform="translate(-244 -37)" fill="#fff"/>
+        </svg>
+
+        <svg id="close" xmlns="http://www.w3.org/2000/svg" width="19.047" height="19.047" viewBox="0 0 19.047 19.047">
+            <path id="Icon_metro-plus" data-name="Icon metro-plus"
+                  d="M15.618,6.979h-4.63V2.349a.421.421,0,0,0-.421-.421H8.042a.421.421,0,0,0-.421.421v4.63H2.992a.421.421,0,0,0-.421.421V9.925a.421.421,0,0,0,.421.421h4.63v4.63a.421.421,0,0,0,.421.421h2.525a.421.421,0,0,0,.421-.421v-4.63h4.63a.421.421,0,0,0,.421-.421V7.4A.421.421,0,0,0,15.618,6.979Z"
+                  transform="translate(-3.181 9.978) rotate(-45)" fill="#838383"/>
+        </svg>
+        <svg id="chainage" xmlns="http://www.w3.org/2000/svg" width="23.999" height="22" viewBox="0 0 23.999 22">
+            <path id="Union_2" data-name="Union 2"
+                  d="M93,156v-6h14v6Zm2-2h10v-2H95Zm14-2a1,1,0,0,0,1-1v-3.937A1.062,1.062,0,0,0,109,146h-2v2H93v-6h14v2h2a3.074,3.074,0,0,1,3,3.063V151a3,3,0,0,1-3,3Zm-14-6h10v-2H95Zm-7-3v-4a3,3,0,0,1,3-3h2v-2h14v6H93v-2H91a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1v2A3,3,0,0,1,88,143Zm7-5h10v-2H95Z"
+                  transform="translate(-88 -134)" fill="#fff"/>
+        </svg>
+        <svg id="refresh" xmlns="http://www.w3.org/2000/svg" width="20.598" height="20.611" viewBox="0 0 20.598 20.611">
+            <path id="Icon_material-refresh" data-name="Icon material-refresh"
+                  d="M23.586,9.027a10.307,10.307,0,1,0,2.679,9.855H23.586A7.726,7.726,0,1,1,16.308,8.576a7.62,7.62,0,0,1,5.436,2.293L17.6,15.017h9.017V6Z"
+                  transform="translate(-6.015 -6)" fill="#fff"/>
+        </svg>
+        <svg id="date" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20">
+            <path id="Path_61" data-name="Path 61"
+                  d="M96.335,95.293,92.634,99l3.7,3.707,1.416-1.414L95.46,99l2.291-2.293Zm7.419,7.414L107.461,99l-3.707-3.707-1.414,1.414L104.633,99l-2.293,2.293ZM112,87H88v20h24V91H96v2h14v12H90V89h22ZM92,93h2V91H92Z"
+                  transform="translate(-88 -87)" fill="#fff"/>
+        </svg>
+        <svg id="download" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22">
+            <g id="Group_198" data-name="Group 198" transform="translate(-244 -86)">
+                <path id="Path_150" data-name="Path 150"
+                      d="M263.069,96.369l-1.414-1.414L257,99.612l0-8.938h-2l0,8.938-4.653-4.653-1.414,1.414L256,103.44Z"
+                      transform="translate(0 -0.753)" fill="#fff"/>
+                <path id="Path_151" data-name="Path 151" d="M252,85v2h-5v5.842h-2V85Z" transform="translate(-1 1)"
+                      fill="#fff"/>
+                <path id="Path_152" data-name="Path 152" d="M267,85v7.842h-2V87h-5V85Z" transform="translate(1 1)"
+                      fill="#fff"/>
+                <rect id="Rectangle_77" data-name="Rectangle 77" width="12" height="2" transform="translate(250 106)"
+                      fill="#fff"/>
+            </g>
+        </svg>
+        <svg id="logout" xmlns="http://www.w3.org/2000/svg" width="19.98" height="22.54" viewBox="0 0 19.98 22.54">
+            <g id="Group_18" data-name="Group 18" transform="translate(-271.532 -133.23)">
+                <path id="Path_34" data-name="Path 34"
+                      d="M285.812,136.75v2.48a7.83,7.83,0,1,1-8.58,0v-2.48a9.99,9.99,0,1,0,8.58,0Z" fill="#fff"/>
+                <g id="Group_17" data-name="Group 17">
+                    <rect id="Rectangle_15" data-name="Rectangle 15" width="2" height="9.674"
+                          transform="translate(280.523 133.23)" fill="#fff"/>
+                </g>
+            </g>
+        </svg>
+
+        <svg id="right-arrow-nav" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <g id="Group_88" data-name="Group 88" transform="translate(-1805 -288)">
+                <circle id="Ellipse_8" data-name="Ellipse 8" cx="16" cy="16" r="16" transform="translate(1805 288)"
+                        fill="#cecece" opacity="0.6"/>
+                <path id="Icon_material-keyboard-arrow-down" data-name="Icon material-keyboard-arrow-down"
+                      d="M10.61,11.76l5.24,5.229,5.24-5.229,1.61,1.61-6.85,6.85L9,13.37Z"
+                      transform="translate(1805.618 319.692) rotate(-90)" fill="#fff"/>
+            </g>
+        </svg>
+        <svg id="left-arrow-nav" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <g id="Group_89" data-name="Group 89" transform="translate(1837 320) rotate(180)">
+                <circle id="Ellipse_8" data-name="Ellipse 8" cx="16" cy="16" r="16" transform="translate(1805 288)"
+                        fill="#cecece" opacity="0.6"/>
+                <path id="Icon_material-keyboard-arrow-down" data-name="Icon material-keyboard-arrow-down"
+                      d="M10.61,11.76l5.24,5.229,5.24-5.229,1.61,1.61-6.85,6.85L9,13.37Z"
+                      transform="translate(1805.618 319.692) rotate(-90)" fill="#fff"/>
+            </g>
+        </svg>
+
+        <svg id="expand" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+            <g id="Icon_ionic-ios-expand" data-name="Icon ionic-ios-expand" transform="translate(-4.5 -4.5)">
+                <path id="Path_157" data-name="Path 157"
+                      d="M7.9,6.469h5.463a.975.975,0,0,0,.977-.977V5.477a.975.975,0,0,0-.977-.977H5.477a.975.975,0,0,0-.977.977v7.889a.975.975,0,0,0,.977.977h.014a.975.975,0,0,0,.977-.977V7.9L14.7,16.08a.967.967,0,0,0,.689.281.946.946,0,0,0,.689-.288.976.976,0,0,0,0-1.378Z"
+                      fill="#b1b8cc"/>
+                <path id="Path_158" data-name="Path 158"
+                      d="M30.523,4.5H22.634a.975.975,0,0,0-.977.977v.014a.975.975,0,0,0,.977.977H28.1L19.92,14.7A.977.977,0,0,0,21.3,16.087L29.531,7.9v5.463a.975.975,0,0,0,.977.977h.014a.975.975,0,0,0,.977-.977V5.477A.975.975,0,0,0,30.523,4.5Z"
+                      fill="#b1b8cc"/>
+                <path id="Path_159" data-name="Path 159"
+                      d="M15.391,19.631a.967.967,0,0,0-.689.281L6.469,28.1V22.634a.975.975,0,0,0-.977-.977H5.477a.975.975,0,0,0-.977.977v7.889a.975.975,0,0,0,.977.977h7.889a.975.975,0,0,0,.977-.977v-.014a.975.975,0,0,0-.977-.977H7.9L16.08,21.3a.977.977,0,0,0-.689-1.666Z"
+                      fill="#b1b8cc"/>
+                <path id="Path_160" data-name="Path 160"
+                      d="M30.523,21.656h-.014a.975.975,0,0,0-.977.977V28.1L21.3,19.92a.967.967,0,0,0-.689-.281.946.946,0,0,0-.689.288.976.976,0,0,0,0,1.378L28.1,29.531H22.634a.975.975,0,0,0-.977.977v.014a.975.975,0,0,0,.977.977h7.889a.975.975,0,0,0,.977-.977V22.634A.975.975,0,0,0,30.523,21.656Z"
+                      fill="#b1b8cc"/>
+            </g>
+        </svg>
+
+<svg id="users" data-name="Group 462" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <path id="Icon_awesome-user-friends" data-name="Icon awesome-user-friends" d="M12.5,8.5a3.125,3.125,0,1,1,3.125-3.125A3.123,3.123,0,0,1,12.5,8.5Zm-2.143.893h.232a4.315,4.315,0,0,0,3.823,0h.232a3.215,3.215,0,0,1,3.214,3.214v.8a1.34,1.34,0,0,1-1.339,1.339H8.482a1.34,1.34,0,0,1-1.339-1.339v-.8A3.215,3.215,0,0,1,10.357,9.393ZM4.464,8.5A2.679,2.679,0,1,1,7.143,5.821,2.679,2.679,0,0,1,4.464,8.5Zm-1.339.893h.106a3.759,3.759,0,0,0,1.233.223A3.759,3.759,0,0,0,5.7,9.393H5.8a3.1,3.1,0,0,1,1.554.43A4.083,4.083,0,0,0,6.25,12.607v1.071c0,.061.014.12.017.179H1.339A1.34,1.34,0,0,1,0,12.518,3.123,3.123,0,0,1,3.125,9.393Z" transform="translate(2.143 1.75)" fill="#dbdbdb"/>
+  <rect id="Rectangle_117" data-name="Rectangle 117" width="20" height="20" fill="none"/>
+</svg>
+<svg id="billing" data-name="Group 463" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Icon_ionic-ios-card" data-name="Icon ionic-ios-card" transform="translate(0.038 0.157)">
+    <path id="Path_13" data-name="Path 13" d="M2.25,8.36A1.51,1.51,0,0,1,3.621,6.75H20.076a1.51,1.51,0,0,1,1.371,1.61v2.415H2.25Z" transform="translate(-2.25 -6.75)" fill="#dbdbdb"/>
+    <path id="Path_14" data-name="Path 14" d="M21.448,23.8a1.51,1.51,0,0,1-1.371,1.61H3.621A1.51,1.51,0,0,1,2.25,23.8V15.75h19.2Zm-6.085-2.415H8.335a.661.661,0,0,0-.6.7h0a.661.661,0,0,0,.6.7h7.028a.661.661,0,0,0,.6-.7h0A.661.661,0,0,0,15.363,21.386Zm3.085,0h-.514a.661.661,0,0,0-.6.7h0a.661.661,0,0,0,.6.7h.514a.661.661,0,0,0,.6-.7h0A.661.661,0,0,0,18.448,21.386Z" transform="translate(-2.25 -9.309)" fill="#dbdbdb"/>
+  </g>
+  <rect id="Rectangle_118" data-name="Rectangle 118" width="20" height="20" fill="none"/>
+</svg>
+<svg id="subscriptions" data-name="Group 464" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <path id="Icon_material-phonelink-setup" data-name="Icon material-phonelink-setup" d="M12.343,11.381v-.859L11.4,9.834a.316.316,0,0,1-.086-.258l.859-1.461c.086-.086.172-.172.258-.086l1.117.344a3.483,3.483,0,0,1,.773-.43l.172-1.117c0-.086.086-.172.258-.172h1.718c.086,0,.172.086.258.172L16.9,7.944a3.483,3.483,0,0,1,.773.43l1.117-.43a.316.316,0,0,1,.258.086L19.9,9.491c.086.086,0,.172-.086.258l-.945.687V11.3l.945.687a.649.649,0,0,1,.086.344l-.859,1.461c-.086.086-.172.172-.258.086l-1.2-.344a3.483,3.483,0,0,1-.773.43l-.172,1.117c.086.086-.086.172-.172.172H14.749c-.086,0-.172-.086-.258-.172l-.172-1.117a3.483,3.483,0,0,1-.773-.43l-1.117.43a.316.316,0,0,1-.258-.086l-.859-1.461c-.086-.086,0-.172.086-.258l.945-.773Zm3.265,1.289a1.718,1.718,0,1,0-1.718-1.718A1.723,1.723,0,0,0,15.608,12.67ZM6.156,1.5h8.592a1.723,1.723,0,0,1,1.718,1.718V5.8H14.749V4.078H6.156V17.825h8.592V16.107h1.718v2.578A1.723,1.723,0,0,1,14.749,20.4H6.156a1.723,1.723,0,0,1-1.718-1.718V3.218A1.723,1.723,0,0,1,6.156,1.5Z" transform="translate(-2.552 -1.5)" fill="#dbdbdb"/>
+  <rect id="Rectangle_119" data-name="Rectangle 119" width="20" height="20" fill="none"/>
+</svg>
+
+<svg id="dashboard-2" data-name="Group 461" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <path id="Icon_metro-chart-bars2" data-name="Icon metro-chart-bars2" d="M9.239,11.2H5.176a.679.679,0,0,0-.677.677v12.19a.679.679,0,0,0,.677.677H9.239a.679.679,0,0,0,.677-.677V11.879A.679.679,0,0,0,9.239,11.2Zm0,12.19H5.176V17.974H9.239v5.418Zm6.772-14.9H11.948a.679.679,0,0,0-.677.677v14.9a.679.679,0,0,0,.677.677h4.063a.679.679,0,0,0,.677-.677V9.17a.679.679,0,0,0-.677-.677Zm0,14.9H11.948V16.62h4.063v6.772ZM22.784,5.784H18.721a.679.679,0,0,0-.677.677V24.069a.679.679,0,0,0,.677.677h4.063a.679.679,0,0,0,.677-.677V6.461a.679.679,0,0,0-.677-.677Zm0,17.608H18.721V15.265h4.063v8.127Z" transform="translate(-3.499 -4.784)" fill="#dbdbdb"/>
+  <rect id="Rectangle_116" data-name="Rectangle 116" width="20" height="20" fill="none"/>
+</svg>
+
+    </defs>
+</svg>

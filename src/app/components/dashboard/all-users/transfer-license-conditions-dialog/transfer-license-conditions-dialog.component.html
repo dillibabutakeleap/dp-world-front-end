@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-end">
+    <mat-icon class="pointer" mat-dialog-close="" [svgIcon]="'custom_solid:close'"></mat-icon>
+</div>
+<div matDialogTitle class="d-inline-flex ">
+    <mat-icon [svgIcon]="'custom_solid:transfer'" style="width:35px;height:35px"></mat-icon>
+    <h1 class="mat-h1 ms-2 title mb-0" style="line-height:35px; text-align:center">Transfer Account</h1>
+</div>
+
+<mat-dialog-content>
+    <p *ngFor="let condition of conditions" class="mb-0">{{condition}}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions class="d-flex justify-content-center mb-2 mt-3">
+    <button class="btn px-4" mat-dialog-close="true">PROCEED</button>
+
+</mat-dialog-actions>

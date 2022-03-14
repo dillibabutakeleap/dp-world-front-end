@@ -1,0 +1,96 @@
+<div class="wrapper vh-100 d-flex justify-content-center overflow-auto">
+    <app-alert></app-alert>
+    <div class="ms-auto me-auto col-11 col-sm-9 col-md-4 mt-auto mb-auto">
+        <div class="card col-12 pb-4">
+            <div class="col-12 text-center mt-5 mt-sm-2 mt-md-5">
+                <h4 class="create-account">Create an Account</h4>
+            </div>
+            <form class="row m-5 mb-0 mt-3 mt-sm-1 mt-md-3" [formGroup]="dataForm" (ngSubmit)="onRegister()">
+                <div class="mb-3 col-12 col-sm-6 col-md-12">
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                        formControlName="name" placeholder="Full Name"
+                        [ngClass]="{
+                         'is-invalid': (isSubmitted|| dataForm.get('name')?.touched) && dataForm.get('name')?.invalid}">
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 col-12 col-sm-6 col-md-12">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        formControlName="email" placeholder="Email"
+                        [ngClass]="{ 'is-invalid': (isSubmitted|| dataForm.get('email')?.touched )&& dataForm.get('email')?.invalid}">
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 mb-sm-0 mb-md-3  col-12 col-sm-6 col-md-12">
+                    <div class="input-group ">
+                        <input [type]="showPassword?'text':'password'" class="form-control" id="basic-url"
+                            aria-describedby="basic-addon3" formControlName="password" placeholder="Password"
+                            [ngClass]="{
+                                'is-invalid': (isSubmitted|| dataForm.get('password')?.touched) && dataForm.get('password')?.invalid}">
+                        <span class="input-group-text pointer" (click)="showPassword=!showPassword">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none"
+                                *ngIf="!showPassword" viewBox="0 0 24 24" stroke="#CCCCCC">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            <svg *ngIf="showPassword" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                style="width:24px;height:24px" viewBox="0 0 24 24" stroke="#CCCCCC">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
+                </div>
+                <div class="mb-3 mb-sm-0 mb-md-3  col-12 col-sm-6 col-md-12">
+                    <div class="input-group ">
+                        <input [type]="showConfirmPassword?'text':'password'" class="form-control" id="basic-url"
+                            aria-describedby="basic-addon3" formControlName="confirmPassword"
+                            placeholder="Confirm Password"
+                            [ngClass]="{
+                                'is-invalid': (isSubmitted|| dataForm.get('confirmPassword')?.touched) && dataForm.get('confirmPassword')?.invalid}">
+                        <span class="input-group-text pointer" (click)="showConfirmPassword=!showConfirmPassword">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none"
+                                *ngIf="!showConfirmPassword" viewBox="0 0 24 24" stroke="#CCCCCC">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            <svg *ngIf="showConfirmPassword" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
+                                fill="none" style="width:24px;height:24px" viewBox="0 0 24 24" stroke="#CCCCCC">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                            </svg>
+                        </span>
+                    </div>
+                    <small id="passwordHelo" class="text-danger ms-3" *ngIf="showPasswordMismatchError">Password and
+                        confirm password didn't matched.</small>
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-4 mt-sm-0 mt-md-4">
+                    <small class="text-center info-text col-10">
+                        By creating an account you agree to our Terms of Service and Privacy Policy
+                    </small>
+                </div>
+                <div class="row col-12 mt-4 align-items-center mb-4">
+                    <div class="col-12 row d-flex justify-content-center ">
+                        <div class="col-12 text-center">
+                            <small class="text-center text-danger">{{errorMsg}}</small>
+                            <small class="text-center text-success">{{successMsg}}</small>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <button type="submit" class="btn submit-btn px-5 py-2">Continue</button>
+                        </div>
+                    </div>
+                    <div class=" mt-2 col-12 d-flex justify-content-center text-center">
+                        <small>Have an account already? <a href="javascript:void(0)" class="info-text"
+                                [routerLink]="['/login']">Login</a>
+                            instead.</small>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

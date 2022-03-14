@@ -1,0 +1,8 @@
+<div class=" col-md-12 fixed-top text-wrap " style="position: fixed !important;" id="alert" align="center">
+  <div *ngFor="let alert of alerts" class="{{ cssClass(alert) }} alert-dismissable">
+    <div class="row d-flex align-items-center">
+      <span class="col-11">{{alert.message}}</span>
+      <a class=" col-1 close pointer p-0 text-muted" (click)="removeAlert(alert)">&times;</a>
+    </div>
+  </div>
+</div>

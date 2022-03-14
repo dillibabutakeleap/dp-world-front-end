@@ -1,0 +1,35 @@
+<div class="sidebar ">
+    <div class="col-12 d-flex align-items-center justify-content-center">
+        <div class="mt-4">
+            <img src="assets/images/top-header-icon.png" routerLink="/" class="pointer" style="height: 3rem;">
+        </div>
+    </div>
+    <div class="menu-items-group">
+        <div class=" d-flex flex-column h-100">
+            <div class="menu-item-wrapper pointer" [ngClass]="isActive(item)?' active':''" [routerLink]="'/'"
+                routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" #item>
+                <div class="ms-4 menu-item d-inline-flex align-items-baseline">
+                    <mat-icon [svgIcon]="isActive(item)?'custom_solid:dashboard-2':'custom:dashboard-2'"></mat-icon>
+                    <span class="ms-3 text">Dashboard</span>
+                </div>
+                <hr class="ms-4">
+            </div>
+            <div class="menu-item-wrapper pointer" [ngClass]="isActive(item2)?' active':''" [routerLink]="'/users'"
+                routerLinkActive="active" #item2>
+                <div class="ms-4 menu-item d-inline-flex align-items-baseline">
+                    <mat-icon [svgIcon]="isActive(item2)?'custom_solid:users':'custom:users'"></mat-icon>
+                    <span class="ms-3 text">Trainers</span>
+                </div>
+                <hr class="ms-4">
+            </div>
+           
+
+            <div class="menu-item-wrapper pointer logout" (click)="onLogoutClick()">
+                <div class="ms-4 menu-item d-inline-flex align-items-baseline">
+                    <mat-icon [svgIcon]="'custom:logout'"></mat-icon>
+                    <span class="ms-3 text">Logout</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

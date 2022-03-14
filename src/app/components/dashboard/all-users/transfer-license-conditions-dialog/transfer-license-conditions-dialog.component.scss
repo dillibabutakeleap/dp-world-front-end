@@ -1,0 +1,23 @@
+.title {
+  color: #707070;
+  font-weight: 500;
+}
+
+p {
+  color: #707070;
+}
+
+.btn {
+  background-color: #53bad4 !important;
+  color: white !important;
+  border-radius: 7px;
+}
+.btn:focus, .btn.focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.btn:hover{
+  background-color: #41bfdf !important;
+    box-shadow:0px 5px 10px 0 rgba(0, 0, 0, 0.4) !important
+}

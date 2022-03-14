@@ -1,0 +1,46 @@
+<div class="wrapper overflow-auto m-0">
+    <div class="px-5 col-12 d-flex flex-column">
+        <span class="text-dark pb-2 ">Trainers</span>
+        <div class="card bg-white col-12 px-5 py-3">
+
+            <div class="my-2 d-flex justify-content-Start">
+                <h1 class="col m-0 text-dark">Trainers </h1>
+            </div>
+            <hr class="m-0 ">
+            <table class="table table-borderless">
+                <thead>
+                    <tr class="my-2">
+                        <th scope="col"></th>
+                        <th scope="col">EmployeeId</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <th class="align-middle " scope="row">
+                            <mat-icon [svgIcon]="'custom_solid:profile-colored'" style="width:34px;height:34px">
+                            </mat-icon>
+                        </th>
+                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.employeeId}}</span>
+                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.name}}</span>
+                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.email}}</span>
+                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.phoneNumber}}</span>
+                        </td>
+                        <td class="align-middle">
+                            <button class="btn  btn-submit " (click)="onViewProgressDataClick(user)">View
+                                Trainees</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <mat-paginator [length]="totalRecords" [pageSize]="search.size" (page)="onPageChange($event)"
+                [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+            </mat-paginator>
+
+        </div>
+    </div>
+</div>
