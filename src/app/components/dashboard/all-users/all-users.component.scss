@@ -6,7 +6,6 @@
   border: none !important;
 }
 
-
 .card-heading {
   color: #f4f4f4 !important;
 }
@@ -66,7 +65,7 @@ td {
 }
 .progress {
   min-width: 4rem;
-  border-radius:0!important;
+  border-radius: 0 !important;
 }
 .progress-bar-holder {
   min-width: 9rem;
@@ -100,9 +99,20 @@ td {
 .substation-box {
   height: 15px;
   width: 15px;
-  background-color: #35AAF8;
+  background-color: #35aaf8;
 }
 
-.substation-bg{
-  background-color: #35AAF8;
+.substation-bg {
+  background-color: #35aaf8;
+}
+table tbody {
+  display: block;
+  height: calc(100vh - 22rem);
+  overflow-y: scroll;
+}
+
+table thead, table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }

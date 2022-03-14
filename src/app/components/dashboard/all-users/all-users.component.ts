@@ -37,7 +37,6 @@ export class AllUsersComponent implements OnInit {
       (res: any) => {
         this.users = res.trainers;
         this.totalRecords = res.totalRecords;
-       
       },
       (err) => {
         console.error(err);
@@ -78,12 +77,28 @@ export class AllUsersComponent implements OnInit {
     return totalProgress > 0 ? totalProgress / 2 : 0;
   }
   onViewProgressDataClick(user: any) {
-    localStorage.setItem(
-      'dp-world-selected-user',
-      JSON.stringify(user.teamUser)
-    );
+    this.storeSelectedUser(user);
     this.router.navigate([user.teamUser.userId, 'progress'], {
       relativeTo: this.route,
     });
+  }
+
+  onViewTraineesClick(user: any) {
+    this.storeSelectedUser(user);
+    this.router.navigate([user.teamUser.userId, 'trainees'], {
+      relativeTo: this.route,
+    });
+  }
+  onResetTrainerPasswordClick(user: any) {
+    this.storeSelectedUser(user);
+    this.router.navigate([user.teamUser.userId, 'reset-password'], {
+      relativeTo: this.route,
+    });
+  }
+  storeSelectedUser(user: any) {
+    localStorage.setItem(
+      'dp-world-selected-trainer',
+      JSON.stringify(user.teamUser)
+    );
   }
 }

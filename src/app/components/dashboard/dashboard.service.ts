@@ -15,7 +15,6 @@ export class DashboardService extends CommonService {
     this.API_END_POINT = environment.backendUrl;
   }
 
-
   getUserTeam(search: any) {
     let params = this.generateHttpParams(search);
     return this.httpClient
@@ -30,6 +29,16 @@ export class DashboardService extends CommonService {
   addTeamUser(payload: any) {
     return this.httpClient
       .post(`${this.API_END_POINT}${apiConfig.webAdmin.addTeamUser}`, payload)
+      .pipe(
+        map((res: any) => res),
+        catchError((err: any) => {
+          return throwError(err.error);
+        })
+      );
+  }
+  addTrainer(payload: any) {
+    return this.httpClient
+      .post(`${this.API_END_POINT}${apiConfig.webAdmin.addTrainer}`, payload)
       .pipe(
         map((res: any) => res),
         catchError((err: any) => {
@@ -64,7 +73,6 @@ export class DashboardService extends CommonService {
       );
   }
 
-
   getUserSubscriptions() {
     return this.httpClient
       .get(`${this.API_END_POINT}${apiConfig.webAdmin.userSubscriptions}`, {})
@@ -91,6 +99,32 @@ export class DashboardService extends CommonService {
       .get(
         `${this.API_END_POINT}${apiConfig.webAdmin.user}/${userId}${apiConfig.webAdmin.progressData}`,
         {}
+      )
+      .pipe(
+        map((res: any) => res),
+        catchError((err: any) => {
+          return throwError(err.error);
+        })
+      );
+  }
+  getTrainees(userId: any, search: any) {
+    return this.httpClient
+      .get(
+        `${this.API_END_POINT}${apiConfig.trainer.trainer}/${userId}${apiConfig.trainer.trainees}`,
+        {}
+      )
+      .pipe(
+        map((res: any) => res),
+        catchError((err: any) => {
+          return throwError(err.error);
+        })
+      );
+  }
+  resetTrainerPassword(payload: any) {
+    return this.httpClient
+      .post(
+        `${this.API_END_POINT}${apiConfig.webAdmin.resetTrainerPassword}`,
+        payload
       )
       .pipe(
         map((res: any) => res),

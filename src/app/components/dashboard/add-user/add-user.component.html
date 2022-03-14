@@ -1,54 +1,69 @@
 <div class="wrapper d-flex  row flex-row justify-content-center gap-4 gap-sm-0 m-0">
-    <div class="card col-12 col-sm-10 " [ngClass]="teamUserId?' col-md-4':'col-md-7'">
+    <div class="card overflow-auto col-12 col-sm-10 " [ngClass]="teamUserId?' col-md-4':'col-md-7'">
         <div class="card-content m-3">
-            <div class=" row justify-content-between">
-                <div [ngClass]="teamUserId?'col-12':'col-6'">
-                    <label class="mat-h2 mt-2">Add User</label>
-                    <form class=" mt-1" [ngClass]="teamUserId?'col-12':'col-10'" [formGroup]="dataForm">
-                        <div class="form-group mt-0">
-                            <label for="nameInput">Full Name</label>
-                            <input type="text" class="form-control" id="nameInput" formControlName="name"
-                                [ngClass]="{'is-invalid': dataForm.get('name')?.touched && dataForm.get('name')?.invalid}">
+            <div class=" row justify-content-center">
+                <div class="col-12 col-sm-11 ">
+                    <label class="mat-h2 mt-2">Add Trainer</label>
+                    <form class=" mt-1 col-12" [formGroup]="dataForm">
+                        <div class="row">
+                            <div class="form-group col-12 col-sm-6">
+                                <label for="nameInput">Full Name</label>
+                                <input type="text" class="form-control" id="nameInput" formControlName="name"
+                                    [ngClass]="{'is-invalid': dataForm.get('name')?.touched && dataForm.get('name')?.invalid}">
+                            </div>
+
+                            <div class="form-group  col-12 col-sm-6 ">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber"
+                                    [ngClass]="{'is-invalid': dataForm.get('phoneNumber')?.touched && dataForm.get('phoneNumber')?.invalid}">
+                            </div>
+
                         </div>
-                        <div class="form-group mt-3">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" formControlName="email"
-                                [ngClass]="{'is-invalid': dataForm.get('email')?.touched && dataForm.get('email')?.invalid}">
-                            <small id="emailHelp" class="form-text help-text">This email will be assigned to user for
-                                login.</small>
+                        <div class="row mt-3">
+                            <div class="form-group   col-12 col-sm-6">
+                                <label for="employeeId">EmployeeId</label>
+                                <input type="text" class="form-control" id="employeeId"
+                                    aria-describedby="employeeIdHelp" formControlName="employeeId"
+                                    [ngClass]="{'is-invalid': dataForm.get('employeeId')?.touched && dataForm.get('employeeId')?.invalid}">
+                                <small id="employeeIdHelp" class="form-text help-text">This employeeId can be used while
+                                    login of user.</small>
+                            </div>
+                            <div class="form-group  col-12 col-sm-6">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" formControlName="email"
+                                    [ngClass]="{'is-invalid': dataForm.get('email')?.touched && dataForm.get('email')?.invalid}">
+                                <small id="emailHelp" class="form-text help-text">This email can be used while login of
+                                    user.</small>
+                            </div>
                         </div>
+                        <div class="row mt-3">
+                            <div class="form-group  col-12 col-sm-6">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" aria-describedby="passwordHelp"
+                                    formControlName="password"
+                                    [ngClass]="{'is-invalid': (dataForm.get('password')?.touched && dataForm.get('password')?.invalid) || isShowConfirmPasswordError}">
+                                <small id="passwordHelp" class="form-text help-text"></small>
+                            </div>
+                            <div class="form-group  col-12 col-sm-6">
+                                <label for="password">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword"
+                                    aria-describedby="confirmPasswordHelpl" formControlName="confirmPassword"
+                                    [ngClass]="{'is-invalid': (dataForm.get('confirmPassword')?.touched && dataForm.get('confirmPassword')?.invalid) || isShowConfirmPasswordError}">
+                                <small id="confirmPasswordHelp" class="form-text help-text"></small>
+                            </div>
+                        </div>
+                        <p class="help-block text-danger pt-2" *ngIf="isShowConfirmPasswordError">Password and Confirm Password didn't matched.</p>
                     </form>
                 </div>
-                <div class="col-6" *ngIf="!teamUserId">
-                    <div class="mt-2">
-                        <span class="text-highlight">*Please note that you can transfer this user license if the
-                            following
-                            criteria below has met.</span>
-                        <div class="mt-4 para">
-                            <span class="sub-heading">Criteria for user license transfer.</span>
-                            <p class="mb-0 mt-2">- Maybe only allow 1-2 transfer of license to another user</p>
-                            <p class="mb-0">- Cannot happen after 3 months of usage</p>
-                            <p class="mb-0">- Cannot happen if more than 50% of the course is completed</p>
-                            <p class="mb-0">- If the course is 80% completed, the same license game progress cannot be
-                                restarted more than twice.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row d-flex justify-content-center mt-4 text-center">
-                <div>
-                    <div class="col-12">
-                        <span class="text-highlight">*This user will receive a mail to create their password to
-                            log-in.</span>
-                    </div>
-                    <button class="btn btn-buy px-4 py-2 mt-4" (click)="onAddUserClick()" *ngIf="!teamUserId">ADD
-                        USER</button>
-                    <button class="btn btn-buy px-4 py-2 mt-4" (click)="onTransferLicenseClick()" *ngIf="teamUserId">TRANSFER
-                        LICENSE</button>
-                </div>
 
+                <div class="row d-flex justify-content-center mt-4 text-center">
+                    <div>
+                        <button class="btn btn-buy px-4 py-2 " (click)="onAddUserClick()" *ngIf="!teamUserId">ADD
+                            USER</button>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
-</div>

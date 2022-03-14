@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AllUsersComponent } from './all-users/all-users.component';
+import { ResetTrainerPasswordComponent } from './all-users/reset-trainer-password/reset-trainer-password.component';
+import { TraineesComponent } from './all-users/trainees/trainees.component';
 import { UserProgressComponent } from './all-users/user-progress/user-progress.component';
 import { BillingComponent } from './billing/billing.component';
 import { DashboardComponent } from './dashboard.component';
@@ -12,20 +14,24 @@ const routes: Routes = [
     component: DashboardComponent,
   },
   {
-    path: 'users',
+    path: 'trainers',
     component: AllUsersComponent,
   },
   {
-    path: 'users/:userId/progress',
+    path: 'trainers/:userId/progress',
     component: UserProgressComponent,
   },
   {
-    path: 'users/add',
+    path: 'trainers/add',
     component: AddUserComponent,
   },
   {
-    path: 'billing',
-    component: BillingComponent,
+    path: 'trainers/:trainerId/trainees',
+    component: TraineesComponent,
+  },
+  {
+    path: 'trainers/:trainerId/reset-password',
+    component: ResetTrainerPasswordComponent,
   },
 ];
 

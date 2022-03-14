@@ -29,7 +29,7 @@ export class UserProgressComponent implements OnInit {
     );
     this.userId = this.route.snapshot.params['userId'];
     if (!this.userId) {
-      this.router.navigate(['/users']);
+      this.router.navigate(['/trainers']);
       return;
     }
     this.getUserProgressData();
