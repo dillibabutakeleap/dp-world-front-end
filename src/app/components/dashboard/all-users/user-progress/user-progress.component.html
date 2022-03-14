@@ -6,18 +6,9 @@
                 <mat-icon [svgIcon]="'heroicons_outline:arrow-sm-left'" class="text-dark"></mat-icon> Back
             </h2>
             <hr class="m-0">
-            <div class="my-3 d-flex justify-content-between">
+            <div class="my-3 d-flex justify-content-start">
                 <h2 class="col m-0 back text-dark">User's Progress</h2>
-                <div class="col-3 row d-inline-flex align-items-center justify-content-center flex-row">
-                    <div class="w-auto d-inline-flex align-items-center" style="height:15px;" on>
-                        <div class="office-box "></div>
-                        <span class="text-dark ms-2">OFFICE</span>
-                    </div>
-                    <div class="w-auto d-inline-flex align-items-center" style="height:15px;">
-                        <div class="substation-box "></div>
-                        <span class="text-dark ms-2">SUB-STATION</span>
-                    </div>
-                </div>
+
             </div>
 
             <hr class="m-0 ">
@@ -27,9 +18,13 @@
                         <th scope="col"></th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Progress</th>
-                        <th scope="col"></th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">
+                            <div class="d-flex justify-content-center">
+                                <span>
+                                    Progress
+                                </span>
+                            </div></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,138 +34,75 @@
                             </mat-icon>
                         </th>
                         <td class="align-middle "><span
-                                class="text-highlight text">{{data&&data.user?data.user.name:'-'}}</span>
+                                class="text-highlight text">{{selectedUser?selectedUser.name:'-'}}</span>
                         </td>
-                        <td class="align-middle "><span class=" text">{{data&&data.user?data.user.email:'-'}}</span>
+                        <td class="align-middle "><span class=" text">{{selectedUser?selectedUser.email:'-'}}</span>
                         </td>
-                        <td class="align-middle "><span class=" text">{{data&&data.user? ('Active Since
-                                ('+(data.user.createdAt | date:'dd/MM/YYYY')+')'):'-'}}</span>
+                        <td class="align-middle "><span class=" text">{{selectedUser?selectedUser.phoneNumber:'-'}}</span>
                         </td>
-                        <td class="align-middle ">
-                            <div class="row d-flex justify-content-start">
+                        
+                        <td class="align-middle d-flex justify-content-start">
                                 <div
-                                    class=" progress-bar-holder d-inline-flex justify-content-between align-items-center ms-0 me-auto">
-                                    <div class="col d-inline-flex flex-row">
+                                    class=" progress-bar-holder d-inline-flex justify-content-end align-items-center ms-auto me-auto">
+                                    <div class="col d-inline-flex align-items-center flex-row">
                                         <div class="progress ">
                                             <div class="progress-bar" role="progressbar"
-                                                [ngStyle]="{'width': (data&&data.user&&data.user.userProgressData?data.user.userProgressData['OFFICE']:0)+'%'}"
+                                                [ngStyle]="{'width': (selectedUser.progress?selectedUser.progress:0)+'%'}"
                                                 aria-valuemin="0" aria-valuemax="100">
                                             </div>
                                         </div>
-                                        <div class="progress ">
-                                            <div class="progress-bar substation-bg" role="progressbar"
-                                                [ngStyle]="{'width': (data&&data.user&&data.user.userProgressData?data.user.userProgressData['SUB-STATION']:0)+'%'}"
-                                                aria-valuemin="0" aria-valuemax="100">
-                                            </div>
-                                        </div>
+
+                                        <span
+                                            class="col text-dark d-inline-flex align-items-center ps-2 text-highlight">{{selectedUser?(selectedUser.progress
+                                            | number : '.2-2'):''}}%</span>
                                     </div>
-                                    <span
-                                        class="col text-dark d-inline-flex align-items-center ps-2 text-highlight">{{data&&data.user?(getUserOverallProgress(data.user)
-                                        | number : '.2-2'):''}}%</span>
-                                </div>
                             </div>
                         </td>
-                        <td class="align-middle ">
-                            <span class="text-highlight text pointer" *ngIf="data && data.user"
-                                (click)="onTransferLicenseClick(data.user)">
-                                <mat-icon [svgIcon]="'heroicons_solid:pencil'"></mat-icon>
-                                Edit & Transfer
-                            </span>
 
-                        </td>
                     </tr>
                 </tbody>
             </table>
-            <div class="score-card  col-12 ">
+            <div class="score-card  col-12 " *ngIf="data">
                 <div class="card-content ">
                     <div class="flex row m-0">
                         <div class="col-6 py-2 m-0 d-inline-flex align-items-center justify-content-center pointer"
-                            (click)="onNavItemClick(0)" [ngClass]="selectedIndex==1?'selected':''">
-                            <h3 class="mb-0">OFFICE</h3>
+                            (click)="onNavItemClick(i)" [ngClass]="selectedIndex==i?'selected':''"
+                            *ngFor="let module of modules;let i=index">
+                            <h3 class="mb-0">{{module}}</h3>
                         </div>
-                        <div (click)="onNavItemClick(1)"
-                            class="col-6 py-2 substation d-inline-flex align-items-center justify-content-center pointer"
-                            [ngClass]="selectedIndex==0?'selected':''">
-                            <h3 class="mb-0">SUB-STATION</h3>
-                        </div>
+
                     </div>
-                    <div class="flex justify-content-around py-3 row">
+                    <div class="flex justify-content-center py-3 row">
                         <div
                             class="col-4 text-center d-flex text-dark light-bold align-items-center justify-content-center">
-                            <span>{{selectedIndex==0?'Office':'Sub-Station'}}
+                            <span>{{modules[selectedIndex] | titlecase}}
                                 Overall Progress</span>
                         </div>
                         <div class="col-4">
                             <div class="">
                                 <div>
-                                    <span class="first-aid-color">First Aid</span>
+                                    <span class="first-aid-color">{{modules[selectedIndex] | titlecase}}</span>
                                 </div>
                                 <div class="d-inline-flex flex-row col-12">
                                     <div class="progress col-8">
                                         <div class="progress-bar first-aid-bg" role="progressbar"
-                                            [ngStyle]="{'width': (selectedIndex==0?(data&&data.progressData&&data.progressData['OFFICE']['FIRST AID'] ?data.progressData['OFFICE']['FIRST AID'].progress:0)
-                                            :(data&&data.progressData&&data.progressData['SUB-STATION']['FIRST AID'] ?data.progressData['SUB-STATION']['FIRST AID'].progress:0))+'%'}"
+                                            [ngStyle]="{'width': (data[modules[selectedIndex]].progress||0)+'%'}"
                                             aria-valuemin="0" aria-valuemax="100">
                                         </div>
                                     </div>
                                     <div class="col-4 ms-2 first-aid-color">
-                                        <span>{{(selectedIndex==0?(data&&data.progressData
-                                            ?data.progressData['OFFICE']['FIRST AID'].progress:0)
-                                            :(data&&data.progressData&&data.progressData['SUB-STATION']['FIRST AID']
-                                            ?data.progressData['SUB-STATION']['FIRST AID'].progress:0)) | number :
-                                            '.2-2'}}%</span>
+                                        <span>{{(data[modules[selectedIndex]].progress| number :
+                                            '.2-2')}}%</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
-                            <div class="my-2">
-                                <div>
-                                    <span class="fire-safety-color">Fire Safety</span>
-                                </div>
-                                <div class="d-inline-flex flex-row col-12">
-                                    <div class="progress col-8">
-                                        <div class="progress-bar fire-safety-bg" role="progressbar"
-                                            [ngStyle]="{'width': (selectedIndex==0?(data&&data.progressData &&data.progressData['OFFICE']['FIRE SAFETY']?data.progressData['OFFICE']['FIRE SAFETY'].progress:0)
-                                            :(data&&data.progressData &&data.progressData['SUB-STATION']['FIRE SAFETY']?data.progressData['SUB-STATION']['FIRE SAFETY'].progress:0))+'%'}"
-                                            aria-valuemin="0" aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                    <div class="col-4 ms-2">
-                                        <span
-                                            class="fire-safety-color">{{selectedIndex==0?(data&&data.progressData&&data.progressData['OFFICE']['FIRE
-                                            SAFETY']?data.progressData['OFFICE']['FIRE SAFETY'].progress:0)
-                                            :(data&&data.progressData ?data.progressData['SUB-STATION']['FIRE
-                                            SAFETY'].progress:0) | number : '.2-2'}}%</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="row m-0 p-0 col-12 flex">
-                        <div class="col-2 p-0 progress-nav-holder" style="width:3rem">
-                            <div class=" d-flex justify-content-center text-nowrap align-items-center   pointer"
-                                style="min-height:50%"
-                                [ngClass]="selectedSideNavIndex==0?'first-aid-selected-bg':'progress-nav'"
-                                (click)="onSideNavClick(0)">
-                                <span class="progress-nav-text  "
-                                    [ngClass]="selectedSideNavIndex==0?'first-aid-selected-color':'progress-nav-text-color'">FIRST
-                                    AID</span>
-                            </div>
-                            <div class=" d-flex justify-content-center text-nowrap  align-items-center  pointer"
-                                style="min-height:50%" (click)="onSideNavClick(1)"
-                                [ngClass]="selectedSideNavIndex==1?'fire-safety-selected-bg':'progress-nav'"><span
-                                    class="progress-nav-text  "
-                                    [ngClass]="selectedSideNavIndex==1?'fire-safety-selected-color':'progress-nav-text-color'">FIRE
-                                    SAFETY</span></div>
-                        </div>
-                        <div class="col-10">
+                        <div class="col-12">
                             <table class="table table-borderless my-2"
-                                *ngFor="let gameStage of 
-                            selectedIndex==0?(selectedSideNavIndex==0?
-                            (data&&data.progressData ?data.progressData['OFFICE']['FIRST AID'].gameStages:[]):(data&&data.progressData ?data.progressData['OFFICE']['FIRE SAFETY'].gameStages:[])):
-                            ((selectedSideNavIndex==0?
-                            (data&&data.progressData ?data.progressData['SUB-STATION']['FIRST AID'].gameStages:[]):(data&&data.progressData &&data.progressData['SUB-STATION']['FIRE SAFETY']?data.progressData['SUB-STATION']['FIRE SAFETY'].gameStages:[])))">
+                                *ngFor="let gameStage of data[modules[selectedIndex]].gameStages">
                                 <thead>
                                     <tr class="my-2">
                                         <th scope="col" style="text-align:left !important">{{gameStage.title}}</th>

@@ -15,6 +15,8 @@ export class UserProgressComponent implements OnInit {
   selectedIndex = 0;
   selectedSideNavIndex = 0;
   userId: string;
+  modules: any[] = [];
+  selectedUser:any;
   constructor(
     private dialog: MatDialog,
     private router: Router,
@@ -24,7 +26,7 @@ export class UserProgressComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.data['user'] = JSON.parse(
+    this.selectedUser = JSON.parse(
       localStorage.getItem('dp-world-selected-user') || '{}'
     );
     this.userId = this.route.snapshot.params['userId'];
@@ -37,8 +39,11 @@ export class UserProgressComponent implements OnInit {
   getUserProgressData() {
     this.dashboard.getUserProgress(this.userId).subscribe(
       (res: any) => {
-        this.data['progressData'] = res.data;
+        this.data = res.data;
         console.log(this.data);
+        for (let module in this.data) {
+          this.modules.push(module);
+        }
       },
       (err) => {
         console.error(err);
@@ -83,6 +88,6 @@ export class UserProgressComponent implements OnInit {
 
   timeMask(value: number): string {
     const minutes: number = Math.floor(value / 60);
-    return minutes + 'M : ' + (value - minutes * 60)+'S';
-}
+    return minutes + 'M : ' + (value - minutes * 60) + 'S';
+  }
 }

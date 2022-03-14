@@ -50,6 +50,7 @@ export class TraineesComponent implements OnInit {
       );
   }
   onViewProgressDataClick(user: any) {
+    user.teamUser['progress']=user.progress
     localStorage.setItem(
       'dp-world-selected-user',
       JSON.stringify(user.teamUser)

@@ -30,6 +30,10 @@ const routes: Routes = [
     component: TraineesComponent,
   },
   {
+    path: 'trainers/:trainerId/trainees/:userId/progress',
+    component: UserProgressComponent,
+  },
+  {
     path: 'trainers/:trainerId/reset-password',
     component: ResetTrainerPasswordComponent,
   },
