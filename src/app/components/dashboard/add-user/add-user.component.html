@@ -14,7 +14,7 @@
 
                             <div class="form-group  col-12 col-sm-6 ">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber"
+                                <input mask="000000000000" type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber"
                                     [ngClass]="{'is-invalid': dataForm.get('phoneNumber')?.touched && dataForm.get('phoneNumber')?.invalid}">
                             </div>
 

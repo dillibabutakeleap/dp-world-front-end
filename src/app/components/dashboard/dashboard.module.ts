@@ -14,6 +14,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { UserProgressComponent } from './all-users/user-progress/user-progress.component';
 import { TraineesComponent } from './all-users/trainees/trainees.component';
 import { ResetTrainerPasswordComponent } from './all-users/reset-trainer-password/reset-trainer-password.component';
+
 @NgModule({
   declarations: [
     DashboardComponent,

@@ -1,60 +1,3 @@
-<!-- <div class="wrapper d-flex  row flex-row justify-content-center gap-4 gap-sm-0 ">
-    <div class="card col-12 col-sm-6 col-md-4 overflow-auto ">
-        <div class="m-4 h-100 card-content">
-            <span class="col-12 d-flex align-items-center">
-                <mat-icon [svgIcon]="'custom_solid:Profile'" style="height:35px; width:35px;"></mat-icon>
-                <b class="ms-2 card-heading">Users</b>
-            </span>
-
-            <div class="row col-12 d-flex justify-content-center mt-3">
-                <div class="col-8">
-                    <small class="card-heading">Super Admin</small>
-                    <div class="mt-3">
-                        <span>
-                            <span class="name-round">{{userDetails?.name.charAt(0).toUpperCase()}}</span>
-                            <small class="text-muted ms-3">{{userDetails?.email}}</small>
-                        </span>
-                    </div>
-                    <div class="mt-3 link" [routerLink]="['/trainers']">Manage Users</div>
-                    <div class="mt-2 link" [routerLink]="['/trainers']">Add User</div>
-                    <div class="mt-2 link" [routerLink]="['/trainers']">Delete User</div>
-                </div>
-                <div class="col-4">
-                    <small class="card-heading">Active licenses</small>
-                    <div class="mt-3">
-                        <div class="gray-round">{{licensesCount}}</div>
-                    </div>
-                </div>
-            </div>
-
-            <button class="btn  btn-submit">+ Add User License</button>
-        </div>
-    </div>
-    <div class="card col-12 col-sm-6 col-md-4 overflow-auto">
-        <div class="m-4 h-100 card-content">
-            <span class="col-12 d-flex align-items-center">
-                <mat-icon [svgIcon]="'custom_solid:credit-card'" style="height:35px; width:35px;"></mat-icon>
-                <b class="ms-2 card-heading">Billing</b>
-            </span>
-            <div class="col-12 mt-2"><small class="card-heading">Estimated upcoming bill on
-                    {{activeSubscription?(activeSubscription.endDate | date:'mediumDate'):''}}</small></div>
-            <div class="col-12 mt-2">
-                <span class="cost">${{activeSubscription?(activeSubscription.subscription.finalPrice/100):''}}</span>
-            </div>
-            <div class="col-12 mt-3"><span class="link-success" [routerLink]="['/subscriptions']">Manage
-                    Subscriptions</span></div>
-            <div class="col-12 mt-2"><span class="link-success" [routerLink]="['/subscription']">Check more
-                    services</span></div>
-
-            <button class="btn  btn-success" [routerLink]="['/subscriptions']">
-                <mat-icon [svgIcon]="'heroicons_outline:arrow-sm-up'"></mat-icon>
-                Upgrade License
-            </button>
-
-        </div>
-    </div>
-</div> -->
-
 <div class="wrapper d-flex overflow-auto m-0">
     <div class="mx-5 mb-5 w-100 d-flex flex-column">
         <span class="text-dark pb-2">Dashboard</span>
@@ -63,11 +6,10 @@
                 <h1 class="text-dark m-0 mb-2">Overall Course Progress</h1>
                 <hr class="col-12 m-0 ">
                 <div class="row col-12 m-3 gap-4">
-                    <div class="round licensed-users">
-                        <h1 class="p-title p-0 m-0">
-                            {{this.dashboardData?.licensesUsed||'-'}}/{{this.dashboardData?.totalUserLicenses||'-'}}
-                        </h1>
-                        <h4 class="p-description">LICENSES USED</h4>
+                   
+                    <div class="round vr-sessions">
+                        <h1 class="p-title p-0 m-0">{{this.dashboardData?.totalTrainees||'-'}}</h1>
+                        <h4 class="p-description text-wrap text-center m-0">Total Trainees</h4>
                     </div>
                     <div class="round vr-sessions">
                         <h1 class="p-title p-0 m-0">{{this.dashboardData?.totalVRSessions||'-'}}</h1>
@@ -83,35 +25,22 @@
                 <div>
                     <h1 class="text-dark m-0 mb-2 mt-2">Module Progress</h1>
                     <hr class="col-12 m-0">
-                    <!-- <div class="row d-flex w-100 h-100 ">
-                    <div class="col-6 d-flex p-0 m-0">
-                        <div class="col-12 bg-danger m-2">
-                        </div>
-                    </div>
-                    <div class="col-6 d-flex p-0 m-0">
-                        <div class="col-12 d-flex p-0 m-0">
-                            <div class="col-12 bg-dark m-2">
-
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                     <div class="row d-flex flex-row">
                         <div class="cl p-0">
                             <div
                                 class="row d-flex flex-row m-2 pr-0  p-5 position-relative d-flex justify-content-between">
-                                <div class="col-4 p-0 row d-flex align-items-end">
+                                <div class="col-5 p-0 row d-flex align-items-end mb-3">
                                     <div class="label-data text-dark">
-                                        <div class="sub-heading"><b>OFFICE</b></div>
+                                        <div class="sub-heading"><b>Overall Progress</b></div>
                                         <div class="text-nowrap col-12 mt-2 d-flex align-items-center">
                                             <span class="first-aid-square m-0">
                                             </span>
-                                            <span class="ms-2">First Aid</span>
+                                            <span class="ms-2">Tutorials</span>
                                         </div>
                                         <div class="text-nowrap col-12 mt-1 d-flex align-items-center">
                                             <span class="fire-safety-square m-0">
                                             </span>
-                                            <span class="ms-2">Fire Safety</span>
+                                            <span class="ms-2">Training Simulation</span>
                                         </div>
                                         <div class="text-nowrap col-12 mt-1 d-flex align-items-center">
                                             <span class="uncompleted-square m-0">
@@ -121,7 +50,7 @@
 
                                     </div>
                                 </div>
-                                <div id="chart" class="col-8">
+                                <div id="chart" class="col-7">
                                     <apx-chart *ngIf="officeChart" [series]="officeChart.series" [chart]="officeChart.chart"
                                         [labels]="officeChart.labels" [fill]="officeChart.fill"
                                         [legend]="officeChart.legend" [colors]="officeChart.colors"
@@ -131,43 +60,7 @@
 
                             </div>
                         </div>
-                        <div class="cm p-0 d-flex align-items-center justify-content-center">
-                            <div class="hr"></div>
-                        </div>
-                        <div class="cr  p-0 ">
-                            <div
-                                class="row d-flex flex-row m-2 pr-0  p-5 position-relative d-flex justify-content-between">
-                                <div class="col-4 p-0 row d-flex align-items-end">
-                                    <div class="label-data text-dark">
-                                        <div class="sub-heading"><b>SUB-STATION</b></div>
-                                        <div class="text-nowrap col-12 mt-2 d-flex align-items-center">
-                                            <span class="first-aid-square m-0">
-                                            </span>
-                                            <span class="ms-2">First Aid</span>
-                                        </div>
-                                        <div class="text-nowrap col-12 mt-1 d-flex align-items-center">
-                                            <span class="fire-safety-square m-0">
-                                            </span>
-                                            <span class="ms-2">Fire Safety</span>
-                                        </div>
-                                        <div class="text-nowrap col-12 mt-1 d-flex align-items-center">
-                                            <span class="uncompleted-square m-0">
-                                            </span>
-                                            <span class="ms-2">Not Completed</span>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div id="chart" class="col-8">
-                                    <apx-chart *ngIf="chartOptions" [series]="chartOptions.series" [chart]="chartOptions.chart"
-                                        [labels]="chartOptions.labels" [fill]="chartOptions.fill"
-                                        [legend]="chartOptions.legend" [colors]="chartOptions.colors"
-                                        [dataLabels]="chartOptions.dataLabels" [responsive]="chartOptions.responsive">
-                                    </apx-chart>
-                                </div>
-
-                            </div>
-                        </div>
+                    
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ export class AddUserComponent implements OnInit {
     this.dataForm = this.fb.group({
       name: [''],
       email: ['', [Validators.email]],
-      phoneNumber: ['', [Validators.email]],
+      phoneNumber: [''],
       password: [''],
       confirmPassword: [''],
       employeeId: ['', Validators.required],
@@ -38,6 +38,7 @@ export class AddUserComponent implements OnInit {
 
   onAddUserClick() {
     const payload = this.dataForm.value;
+    payload.email = payload.email ? payload.email.toLowerCase() : payload.email;
     if (!payload.password || payload.confirmPassword !== payload.password) {
       this.isShowConfirmPasswordError = true;
       return;

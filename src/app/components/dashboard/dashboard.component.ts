@@ -33,7 +33,6 @@ export class DashboardComponent implements OnInit {
   userDetails: any;
   activeSubscription: any;
   @ViewChild('chart') chart: ChartComponent;
-  public chartOptions: any;
   public officeChart: any;
   public dashboardData: any;
   constructor(
@@ -83,7 +82,6 @@ export class DashboardComponent implements OnInit {
       (data) => {
         this.dashboardData = data;
         this.processOfficeChartData();
-        this.processSubStationData();
       },
       (err) => {
         console.log(err);
@@ -97,74 +95,19 @@ export class DashboardComponent implements OnInit {
     let fireSafety: number = 0;
     let firstAid: number = 0;
     console.log(this.dashboardData);
-    if (this.dashboardData && this.dashboardData.progressData.OFFICE) {
-      unCompleted = this.dashboardData.progressData.OFFICE['unCompleted']
-        ? this.dashboardData.progressData.OFFICE['unCompleted']
+    if (this.dashboardData && this.dashboardData.progressData) {
+      unCompleted = this.dashboardData.progressData['unCompleted']
+        ? this.dashboardData.progressData['unCompleted']
         : 0;
-      fireSafety = this.dashboardData.progressData.OFFICE['FIRE SAFETY']
-        ? this.dashboardData.progressData.OFFICE['FIRE SAFETY']
+      fireSafety = this.dashboardData.progressData['Training Simulation']
+        ? this.dashboardData.progressData['Training Simulation']
         : 0;
-      firstAid = this.dashboardData.progressData.OFFICE['FIRST AID']
-        ? this.dashboardData.progressData.OFFICE['FIRST AID']
+      firstAid = this.dashboardData.progressData['Tutorials']
+        ? this.dashboardData.progressData['Tutorials']
         : 0;
       console.log('coming');
     }
     this.officeChart = {
-      // uncompleted, fire safety, first aid
-      series: [unCompleted, fireSafety, firstAid],
-      chart: {
-        width: 300,
-        type: 'donut',
-      },
-      dataLabels: {
-        enabled: true,
-      },
-      legend: {
-        show: false,
-      },
-      fill: {
-        type: 'gradient',
-        colors: ['#CECECE', '#55BBD5', '#24A3F8'],
-      },
-      colors: ['#CECECE', '#55BBD5', '#24A3F8'],
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200,
-            },
-            legend: {
-              position: 'top',
-            },
-          },
-        },
-      ],
-    };
-  }
-  processSubStationData() {
-    let unCompleted: number = 0;
-    let fireSafety: number = 0;
-    let firstAid: number = 0;
-    console.log(this.dashboardData);
-    if (this.dashboardData && this.dashboardData.progressData['SUB-STATION']) {
-      unCompleted = this.dashboardData.progressData['SUB-STATION'][
-        'unCompleted'
-      ]
-        ? this.dashboardData.progressData['SUB-STATION']['unCompleted']
-        : 0;
-      fireSafety = this.dashboardData.progressData['SUB-STATION']['FIRE SAFETY']
-        ? this.dashboardData.progressData['SUB-STATION']['FIRE SAFETY']
-        : 0;
-      firstAid = this.dashboardData.progressData['SUB-STATION']['FIRST AID']
-        ? this.dashboardData.progressData['SUB-STATION']['FIRST AID']
-        : 0;
-      console.log('coming');
-    }
-    if (fireSafety + firstAid <= 0) {
-      unCompleted = 100;
-    }
-    this.chartOptions = {
       // uncompleted, fire safety, first aid
       series: [unCompleted, fireSafety, firstAid],
       chart: {
