@@ -16,7 +16,7 @@ export class UserProgressComponent implements OnInit {
   selectedSideNavIndex = 0;
   userId: string;
   modules: any[] = [];
-  selectedUser:any;
+  selectedUser: any;
   constructor(
     private dialog: MatDialog,
     private router: Router,
@@ -41,8 +41,8 @@ export class UserProgressComponent implements OnInit {
       (res: any) => {
         this.data = res.data;
         console.log(this.data);
-        for (let module in this.data) {
-          this.modules.push(module);
+        for (let module of this.data) {
+          this.modules.push(module.title);
         }
       },
       (err) => {
