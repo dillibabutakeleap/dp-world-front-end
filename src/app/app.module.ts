@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AuthModule } from './components/auth/auth.module';
 import { AuthGuard } from './components/auth/auth.guard';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ErrorInterceptor } from './shared/interceptors/error-interceptor.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,14 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     AuthModule,
     NgxSpinnerModule,
   ],
-  providers: [AuthGuard],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
