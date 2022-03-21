@@ -105,7 +105,6 @@ export class DashboardComponent implements OnInit {
       firstAid = this.dashboardData.progressData['Tutorials']
         ? this.dashboardData.progressData['Tutorials']
         : 0;
-      console.log('coming');
     }
     this.officeChart = {
       // uncompleted, fire safety, first aid
