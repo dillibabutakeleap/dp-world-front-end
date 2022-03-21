@@ -57,12 +57,12 @@
 
 <svg id="notification-bell" xmlns="http://www.w3.org/2000/svg" width="22.493" height="28.132" viewBox="0 0 22.493 28.132">
   <g id="Icon_ionic-ios-notifications" data-name="Icon ionic-ios-notifications" transform="translate(-6.761 -3.93)">
-    <path id="Path_7" data-name="Path 7" d="M17.993,32.063c2.187,0,3.382-1.547,3.382-3.727H14.6C14.6,30.516,15.8,32.063,17.993,32.063Z" fill="#53bad4"/>
-    <path id="Path_8" data-name="Path 8" d="M28.969,24.764c-1.083-1.427-3.213-2.264-3.213-8.655,0-6.56-2.9-9.2-5.6-9.83-.253-.063-.436-.148-.436-.415v-.2a1.716,1.716,0,1,0-3.431,0v.2c0,.26-.183.352-.436.415-2.707.64-5.6,3.27-5.6,9.83,0,6.391-2.13,7.221-3.213,8.655A1.4,1.4,0,0,0,8.163,27H27.858A1.4,1.4,0,0,0,28.969,24.764Z" fill="#53bad4"/>
+    <path id="Path_7" data-name="Path 7" d="M17.993,32.063c2.187,0,3.382-1.547,3.382-3.727H14.6C14.6,30.516,15.8,32.063,17.993,32.063Z" fill="#003764"/>
+    <path id="Path_8" data-name="Path 8" d="M28.969,24.764c-1.083-1.427-3.213-2.264-3.213-8.655,0-6.56-2.9-9.2-5.6-9.83-.253-.063-.436-.148-.436-.415v-.2a1.716,1.716,0,1,0-3.431,0v.2c0,.26-.183.352-.436.415-2.707.64-5.6,3.27-5.6,9.83,0,6.391-2.13,7.221-3.213,8.655A1.4,1.4,0,0,0,8.163,27H27.858A1.4,1.4,0,0,0,28.969,24.764Z" fill="#003764"/>
   </g>
 </svg>
 <svg id="Profile" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
-  <circle id="Ellipse_96" data-name="Ellipse 96" cx="28" cy="28" r="28" fill="#53bad4"/>
+  <circle id="Ellipse_96" data-name="Ellipse 96" cx="28" cy="28" r="28" fill="#003764"/>
   <g id="Symbol_6_1" data-name="Symbol 6 – 1" transform="translate(20 20)">
     <g id="Union_1" data-name="Union 1" transform="translate(0 -354)">
       <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(4 354)" fill="#fff"/>
@@ -100,12 +100,12 @@
 </svg>
 
 <svg id="back-arrow" xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75">
-  <rect id="Rectangle_2" data-name="Rectangle 2" width="75" height="75" fill="#53bad4"/>
+  <rect id="Rectangle_2" data-name="Rectangle 2" width="75" height="75" fill="#003764"/>
 </svg>
 
 <svg id="edit-pencil" xmlns="http://www.w3.org/2000/svg" width="215" height="55" viewBox="0 0 215 55">
   <g id="Group_454" data-name="Group 454" transform="translate(-1429 -499)">
-    <text id="Edit_Transfer" data-name="Edit &amp; Transfer" transform="translate(1465 518)" fill="#53bad4" font-size="12" font-family="AdelleSans-Regular, Adelle Sans"><tspan x="0" y="0">Edit &amp; Transfer</tspan></text>
+    <text id="Edit_Transfer" data-name="Edit &amp; Transfer" transform="translate(1465 518)" fill="#003764" font-size="12" font-family="AdelleSans-Regular, Adelle Sans"><tspan x="0" y="0">Edit &amp; Transfer</tspan></text>
     <g id="Group_445" data-name="Group 445">
       <g id="Icon_feather-edit-3" data-name="Icon feather-edit-3" transform="translate(1429.5 499.364)">
         <path id="Path_9" data-name="Path 9" d="M18,30h9.629" transform="translate(-3.871 -7.364)" fill="none" stroke="#4bb2cc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
@@ -117,21 +117,21 @@
 </svg>
 <svg id="transfer" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
   <g id="Group_422" data-name="Group 422" transform="translate(-280 -332)">
-    <circle id="Ellipse_96" data-name="Ellipse 96" cx="28" cy="28" r="28" transform="translate(280 332)" fill="#53bad4"/>
+    <circle id="Ellipse_96" data-name="Ellipse 96" cx="28" cy="28" r="28" transform="translate(280 332)" fill="#003764"/>
     <path id="Icon_open-transfer" data-name="Icon open-transfer" d="M18.629,0V3.1H0v3.1H18.629v3.1l6.21-4.657ZM6.21,12.419,0,17.077l6.21,4.657v-3.1H24.839v-3.1H6.21Z" transform="translate(295.581 349.133)" fill="#fff"/>
   </g>
 </svg>
 <svg id="close" xmlns="http://www.w3.org/2000/svg" width="29.25" height="29.25" viewBox="0 0 29.25 29.25">
-  <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M18,3.375A14.625,14.625,0,1,0,32.625,18,14.574,14.574,0,0,0,18,3.375Zm7.313,19.89-2.048,2.047L18,20.047l-5.265,5.265-2.048-2.047L15.953,18l-5.265-5.265,2.048-2.047L18,15.953l5.265-5.265,2.048,2.047L20.047,18Z" transform="translate(-3.375 -3.375)" fill="#53bad4"/>
+  <path id="Icon_ionic-md-close-circle" data-name="Icon ionic-md-close-circle" d="M18,3.375A14.625,14.625,0,1,0,32.625,18,14.574,14.574,0,0,0,18,3.375Zm7.313,19.89-2.048,2.047L18,20.047l-5.265,5.265-2.048-2.047L15.953,18l-5.265-5.265,2.048-2.047L18,15.953l5.265-5.265,2.048,2.047L20.047,18Z" transform="translate(-3.375 -3.375)" fill="#003764"/>
 </svg>
 
 <svg id="dashboard-2" data-name="Group 461" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <path id="Icon_metro-chart-bars2" data-name="Icon metro-chart-bars2" d="M9.239,11.2H5.176a.679.679,0,0,0-.677.677v12.19a.679.679,0,0,0,.677.677H9.239a.679.679,0,0,0,.677-.677V11.879A.679.679,0,0,0,9.239,11.2Zm0,12.19H5.176V17.974H9.239v5.418Zm6.772-14.9H11.948a.679.679,0,0,0-.677.677v14.9a.679.679,0,0,0,.677.677h4.063a.679.679,0,0,0,.677-.677V9.17a.679.679,0,0,0-.677-.677Zm0,14.9H11.948V16.62h4.063v6.772ZM22.784,5.784H18.721a.679.679,0,0,0-.677.677V24.069a.679.679,0,0,0,.677.677h4.063a.679.679,0,0,0,.677-.677V6.461a.679.679,0,0,0-.677-.677Zm0,17.608H18.721V15.265h4.063v8.127Z" transform="translate(-3.499 -4.784)" fill="#55bfeb"/>
+  <path fill="#003764" id="Icon_metro-chart-bars2" data-name="Icon metro-chart-bars2" d="M9.239,11.2H5.176a.679.679,0,0,0-.677.677v12.19a.679.679,0,0,0,.677.677H9.239a.679.679,0,0,0,.677-.677V11.879A.679.679,0,0,0,9.239,11.2Zm0,12.19H5.176V17.974H9.239v5.418Zm6.772-14.9H11.948a.679.679,0,0,0-.677.677v14.9a.679.679,0,0,0,.677.677h4.063a.679.679,0,0,0,.677-.677V9.17a.679.679,0,0,0-.677-.677Zm0,14.9H11.948V16.62h4.063v6.772ZM22.784,5.784H18.721a.679.679,0,0,0-.677.677V24.069a.679.679,0,0,0,.677.677h4.063a.679.679,0,0,0,.677-.677V6.461a.679.679,0,0,0-.677-.677Zm0,17.608H18.721V15.265h4.063v8.127Z" transform="translate(-3.499 -4.784)" fill="#55bfeb"/>
   <rect id="Rectangle_116" data-name="Rectangle 116" width="20" height="20" fill="none"/>
 </svg>
 
 <svg id="users" data-name="Group 462" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <path id="Icon_awesome-user-friends" data-name="Icon awesome-user-friends" d="M12.5,8.5a3.125,3.125,0,1,1,3.125-3.125A3.123,3.123,0,0,1,12.5,8.5Zm-2.143.893h.232a4.315,4.315,0,0,0,3.823,0h.232a3.215,3.215,0,0,1,3.214,3.214v.8a1.34,1.34,0,0,1-1.339,1.339H8.482a1.34,1.34,0,0,1-1.339-1.339v-.8A3.215,3.215,0,0,1,10.357,9.393ZM4.464,8.5A2.679,2.679,0,1,1,7.143,5.821,2.679,2.679,0,0,1,4.464,8.5Zm-1.339.893h.106a3.759,3.759,0,0,0,1.233.223A3.759,3.759,0,0,0,5.7,9.393H5.8a3.1,3.1,0,0,1,1.554.43A4.083,4.083,0,0,0,6.25,12.607v1.071c0,.061.014.12.017.179H1.339A1.34,1.34,0,0,1,0,12.518,3.123,3.123,0,0,1,3.125,9.393Z" transform="translate(2.143 1.75)" fill="#55bfeb"/>
+  <path fill="#003764" id="Icon_awesome-user-friends" data-name="Icon awesome-user-friends" d="M12.5,8.5a3.125,3.125,0,1,1,3.125-3.125A3.123,3.123,0,0,1,12.5,8.5Zm-2.143.893h.232a4.315,4.315,0,0,0,3.823,0h.232a3.215,3.215,0,0,1,3.214,3.214v.8a1.34,1.34,0,0,1-1.339,1.339H8.482a1.34,1.34,0,0,1-1.339-1.339v-.8A3.215,3.215,0,0,1,10.357,9.393ZM4.464,8.5A2.679,2.679,0,1,1,7.143,5.821,2.679,2.679,0,0,1,4.464,8.5Zm-1.339.893h.106a3.759,3.759,0,0,0,1.233.223A3.759,3.759,0,0,0,5.7,9.393H5.8a3.1,3.1,0,0,1,1.554.43A4.083,4.083,0,0,0,6.25,12.607v1.071c0,.061.014.12.017.179H1.339A1.34,1.34,0,0,1,0,12.518,3.123,3.123,0,0,1,3.125,9.393Z" transform="translate(2.143 1.75)" fill="#55bfeb"/>
   <rect id="Rectangle_117" data-name="Rectangle 117" width="20" height="20" fill="none"/>
 </svg>
 <svg id="billing" data-name="Group 463" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -158,8 +158,8 @@
 <svg id="profile-colored" data-name="Group 422" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
   <defs>
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#4aa579" stop-opacity="0.502"/>
-      <stop offset="1" stop-color="#54bee7" stop-opacity="0.502"/>
+      <stop offset="0" stop-color="#003764" stop-opacity="10"/>
+      <stop offset="1" stop-color="#54BEE780" stop-opacity="1"/>
     </linearGradient>
   </defs>
   <circle id="Ellipse_96" data-name="Ellipse 96" cx="28" cy="28" r="28" fill="url(#linear-gradient)"/>

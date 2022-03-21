@@ -22,17 +22,33 @@ body {
 }
 
 .btn-submit {
-  background: #53bad4;
+  background: #003764;
   color: #fff;
   border-radius: 8px;
 }
+.btn-submit:hover {
+  color: #fff;
+}
 .btn-success {
-  background: #4ca98b;
+  background: rgb(35, 80, 117);
+  background: linear-gradient(
+    141deg,
+    rgba(35, 80, 117, 1) 0%,
+    rgba(35, 80, 117, 1) 100%
+  );
   color: #fff;
   border-radius: 8px;
   border: none;
 }
+.btn-success:hover {
+  color: #fff;
+}
 
 .text-dark {
   color: #707070 !important;
+}
+
+
+.text-highlight {
+  color: #003764;
 }

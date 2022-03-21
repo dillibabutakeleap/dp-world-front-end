@@ -3,12 +3,12 @@
     <div class="ms-auto me-auto col-11 col-sm-6 col-md-4 mt-auto mb-auto">
         <div class="card col-12 pb-4 overflow-hidden">
             <div class="d-flex justify-content-center pt-4 align-items-center col-12">
-                <div class="col-12 d-flex justify-content-center">
-                    <img src="assets/images/main-logo.png" alt="" height="150">
+                <div class="col-12 d-flex justify-content-center ">
+                    <img src="assets/images/main-logo.jpg" alt="" height="100">
                 </div>
             </div>
             <div class="col-12 text-center mt-3">
-                <h4 class="welcomeback">Welcome back!</h4>
+                <h3 class="welcomeback">Welcome back!</h3>
             </div>
             <form class="m-5 mb-0 mt-3" [formGroup]="dataForm" (ngSubmit)="onLogin()">
                 <div class="mb-4">
@@ -21,8 +21,9 @@
                 <div class="mb-3">
                     <!-- <label for="exampleInputPassword1" class="form-label text-disabled">Password</label> -->
                     <div class="input-group mb-3">
-                        <input [type]="showPassword?'text':'password'" placeholder="Password" class="form-control"
-                            id="basic-url" aria-describedby="basic-addon3" formControlName="password">
+                        <input [type]="showPassword?'text':'password'" placeholder="Password"
+                            class="form-control password" id="basic-url" aria-describedby="basic-addon3"
+                            formControlName="password">
                         <span class="input-group-text pointer" (click)="showPassword=!showPassword">
                             <svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none"
                                 *ngIf="!showPassword" viewBox="0 0 24 24" stroke="#CCCCCC">
@@ -51,10 +52,10 @@
                     </div>
                 </div>
             </form>
-            <div class="mx-5 d-flex justify-content-between">
+            <!-- <div class="mx-5 d-flex justify-content-between">
                 <a href="javascript:void(0)" [routerLink]="['/forgot-password']">Forgot Password?</a>
                 <a href="javascript:void(0)" [routerLink]="['/register']">Register</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

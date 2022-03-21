@@ -15,7 +15,6 @@
   height: calc(100vh - 4rem);
   width: 100%;
   background: #e5e5e5;
-
 }
 label {
   color: #9a9a9a;
@@ -24,7 +23,7 @@ label {
 .form-control {
   border-radius: 20px;
   background-color: #ffffff;
-  border: 1px solid #bce0fd;
+  border: 1px solid #003764;
   height: 2.4rem;
 }
 
@@ -33,7 +32,7 @@ label {
 }
 
 .text-highlight {
-  color: #53bad4;
+  color: #003764;
 }
 
 .sub-heading {
@@ -45,18 +44,14 @@ label {
 }
 
 .btn-buy {
-  background: rgb(75, 167, 133);
-  background: linear-gradient(
-    141deg,
-    rgba(75, 167, 133, 1) 0%,
-    rgba(84, 188, 223, 1) 100%
-  );
+  background: #003764;
   color: #fff;
 }
 .btn-buy:hover {
+  color: #ffff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-input{
- color: #7e7b7b !important;
+input {
+  color: #7e7b7b !important;
 }

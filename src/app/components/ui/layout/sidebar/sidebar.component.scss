@@ -14,7 +14,7 @@
   padding-bottom: 15px;
 }
 hr {
-  background: #696a6c;
+  background: #969798;
   width: 100% !important;
   height: 1px;
   margin: 0 !important;
@@ -28,11 +28,16 @@ hr {
 
 .menu-item-wrapper:hover,
 .active {
-  background: #696a6c;
+  background: #969798;
 }
 .logout {
   position: absolute;
   bottom: 1rem !important;
   right: 0;
   left: 0 !important;
+}
+
+.text-highlight {
+  color: #003764;
+
 }

@@ -4,7 +4,7 @@
   margin: 0;
 }
 .back-btn-bg {
-  background: #53bad4;
+  background: #003764;
   height: 4rem !important;
   width: 4rem !important;
   display: inline-flex !important;
@@ -16,20 +16,20 @@
 
 ::ng-deep.profile-menu {
   border-radius: 15px !important;
-  background-color: #ddf1f6 !important;
+  background-color: #6687a2 !important;
 }
 
 .name {
   min-width: 15rem !important;
   font-size: 1.2rem;
   text-align: end !important;
-  color: #707070;
+  color: #ffffff;
 }
 .email {
   min-width: 15rem !important;
   font-size: 1rem;
   text-align: end !important;
-  color: #707070;
+  color: #ffffff;
 }
 
 ::ng-deep.mat-menu-panel {
