@@ -22,4 +22,8 @@ export const apiConfig = {
     resetTrainerPassword: '/web-admin/reset-trainer-password',
     progressData: '/progress-data',
   },
+  user: {
+    user: '/user',
+    getUserCourseCompletionCertificate: '/completion-certificate',
+  },
 };

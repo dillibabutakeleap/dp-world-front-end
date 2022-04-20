@@ -3,7 +3,7 @@ import { PageEvent } from '@angular/material/paginator/paginator';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from 'src/app/shared/alert/services/alert.service';
 import { DashboardService } from '../../dashboard.service';
-
+import { saveAs } from 'file-saver';
 @Component({
   selector: 'app-trainees',
   templateUrl: './trainees.component.html',
@@ -50,7 +50,7 @@ export class TraineesComponent implements OnInit {
       );
   }
   onViewProgressDataClick(user: any) {
-    user.teamUser['progress']=user.progress
+    user.teamUser['progress'] = user.progress;
     localStorage.setItem(
       'dp-world-selected-user',
       JSON.stringify(user.teamUser)
@@ -64,5 +64,29 @@ export class TraineesComponent implements OnInit {
     this.search.size = pageEv.pageSize;
     this.getTrainees();
     return pageEv;
+  }
+
+  onDownloadUserProgress(user: any) {
+    this.dashboardService
+      .getUserCourseCompletionCertificate(user.teamUser.userId)
+      .subscribe(
+        (data: any) => {
+          var fileName = user.teamUser.employeeId + '-certificate.pdf';
+          const contentDisposition = data.headers.get('Content-Disposition');
+          if (contentDisposition) {
+            const fileNameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+            const matches = fileNameRegex.exec(contentDisposition);
+            if (matches != null && matches[1]) {
+              fileName = matches[1].replace(/['"]/g, '');
+            }
+          }
+          saveAs(data.body, fileName);
+          this.alertService.success('Certificate downloaded successfully.');
+        },
+        (error) => {
+          console.error(error);
+          this.alertService.error(error.message);
+        }
+      );
   }
 }

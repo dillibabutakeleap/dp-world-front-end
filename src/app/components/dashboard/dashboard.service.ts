@@ -133,4 +133,17 @@ export class DashboardService extends CommonService {
         })
       );
   }
+  getUserCourseCompletionCertificate(userId: any) {
+    return this.httpClient
+      .get(
+        `${this.API_END_POINT}${apiConfig.user.user}/${userId}${apiConfig.user.getUserCourseCompletionCertificate}`,
+        { observe: 'response', responseType: 'blob' as 'json' }
+      )
+      .pipe(
+        map((res: any) => res),
+        catchError((err: any) => {
+          return throwError(err.error);
+        })
+      );
+  }
 }

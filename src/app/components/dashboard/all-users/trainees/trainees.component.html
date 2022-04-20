@@ -11,36 +11,45 @@
                 <h1 class="col m-0 text-dark">Trainees of {{selectedTrainer.name}} </h1>
             </div>
             <hr class="m-0 ">
-            <table class="table table-borderless">
-                <thead>
-                    <tr class="my-2">
-                        <th scope="col" style="width:20px !important"></th>
-                        <th scope="col">EmployeeId</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone Number</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let user of trainees">
-                        <th class="align-middle " scope="row" style="width:20px">
-                            <mat-icon [svgIcon]="'custom_solid:profile-colored'" style="width:34px;height:34px">
-                            </mat-icon>
-                        </th>
-                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.employeeId}}</span>
-                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.name}}</span>
-                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.email}}</span>
-                        <td class="align-middle "><span class="text-highlight text">{{user.teamUser.phoneNumber}}</span>
-                        </td>
-                        <td class="align-middle">
-                            <button class="btn  btn-submit " (click)="onViewProgressDataClick(user)">View
-                                Progress</button>
-                        </td>
-                    </tr>
+            <div class="table-responsive-sm">
+                <table class="table table-borderless ">
+                    <thead>
+                        <tr class="my-2">
+                            <th scope="col" style="width:20px !important"></th>
+                            <th scope="col">EmployeeId</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col" style="width:12rem"></th>
+                            <th scope="col" ></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of trainees">
+                            <th class="align-middle " scope="row" style="width:20px">
+                                <mat-icon [svgIcon]="'custom_solid:profile-colored'" style="width:34px;height:34px">
+                                </mat-icon>
+                            </th>
+                            <td class="align-middle "><span
+                                    class="text-highlight text">{{user.teamUser.employeeId}}</span>
+                            <td class="align-middle "><span class="text-highlight text">{{user.teamUser.name}}</span>
+                            <td class="align-middle "><span class="text-highlight text">{{user.teamUser.email}}</span>
+                            <td class="align-middle "><span
+                                    class="text-highlight text">{{user.teamUser.phoneNumber}}</span>
+                            </td>
+                            <td class="align-middle" style="width:12rem">
+                                <button class="btn  btn-submit " (click)="onDownloadUserProgress(user)">Download
+                                    Certificate</button>
+                            </td>
+                            <td class="align-middle">
+                                <button class="btn  btn-submit " (click)="onViewProgressDataClick(user)">View
+                                    Progress</button>
+                            </td>
+                        </tr>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
             <h2 class="text-center text-dark" *ngIf="!trainees || !trainees.length">No Trainees Found </h2>
             <mat-paginator [length]="totalRecords" [pageSize]="search.size" (page)="onPageChange($event)"
                 [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
