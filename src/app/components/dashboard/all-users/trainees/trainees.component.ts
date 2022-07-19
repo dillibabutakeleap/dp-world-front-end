@@ -89,4 +89,27 @@ export class TraineesComponent implements OnInit {
         }
       );
   }
+  onDeleteTrainerClick(user: any) {
+    console.log(user);
+    if (
+      confirm(
+        'Are you sure you want to delete the trainer?.\nNOTE: Trainees data of this trainer will get deleted too.'
+      )
+    ) {
+      let payload = { userId: user.userId };
+      this.dashboardService.deleteUser(payload).subscribe(
+        (res: any) => {
+          this.alertService.success(res.message);
+           this.getTrainees();
+        },
+        (error: any) => {
+          console.log(error);
+          this.alertService.error(
+            error && error.message ? error.message : error
+          );
+        }
+      );
+    }
+  }
+
 }

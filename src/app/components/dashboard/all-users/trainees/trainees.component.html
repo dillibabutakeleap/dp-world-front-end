@@ -21,7 +21,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone Number</th>
                             <th scope="col" style="width:12rem"></th>
-                            <th scope="col" ></th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -38,12 +38,19 @@
                                     class="text-highlight text">{{user.teamUser.phoneNumber}}</span>
                             </td>
                             <td class="align-middle" style="width:12rem">
-                                <button class="btn  btn-submit " (click)="onDownloadUserProgress(user)">Download
+                                <button *ngIf="user.progress>=100" class="btn  btn-submit "
+                                    (click)="onDownloadUserProgress(user)">Download
                                     Certificate</button>
                             </td>
                             <td class="align-middle">
-                                <button class="btn  btn-submit " (click)="onViewProgressDataClick(user)">View
-                                    Progress</button>
+                                
+                                <button mat-button class="btn  btn-submit " [matMenuTriggerFor]="menu">Menu</button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item (click)="onViewProgressDataClick(user)">View
+                                        Progress</button>
+                                    <button mat-menu-item class="bg-danger text-white"
+                                        (click)="onDeleteTrainerClick(user.teamUser)">Delete User</button>
+                                </mat-menu>
                             </td>
                         </tr>
 

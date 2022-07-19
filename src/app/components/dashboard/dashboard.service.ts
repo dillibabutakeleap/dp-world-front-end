@@ -146,4 +146,14 @@ export class DashboardService extends CommonService {
         })
       );
   }
+  deleteUser(payload: any) {
+    return this.httpClient
+      .post(`${this.API_END_POINT}${apiConfig.webAdmin.deleteUser}`, payload)
+      .pipe(
+        map((res: any) => res),
+        catchError((err: any) => {
+          return throwError(err.error);
+        })
+      );
+  }
 }

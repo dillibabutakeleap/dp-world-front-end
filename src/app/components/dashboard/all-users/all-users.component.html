@@ -37,8 +37,18 @@
                             <button class="btn  btn-submit " (click)="onViewTraineesClick(user)">View
                                 Trainees</button>
                         </td>
-                        <td class="align-middle"><button class="btn  btn-submit "
-                                (click)="onResetTrainerPasswordClick(user)">Reset Password</button></td>
+                        <td class="align-middle">
+                            <button mat-button class="btn  btn-submit " [matMenuTriggerFor]="menu">Menu</button>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item (click)="onResetTrainerPasswordClick(user)">Reset
+                                    Password</button>
+                                <button mat-menu-item class="bg-danger text-white"
+                                    (click)="onDeleteTrainerClick(user.teamUser)">Delete Trainer</button>
+                            </mat-menu>
+                        </td>
+
+                        <!-- <td class="align-middle"><button class="btn  btn-submit "
+                                (click)="onResetTrainerPasswordClick(user)">Reset Password</button></td> -->
                     </tr>
 
                 </tbody>

@@ -14,6 +14,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { UserProgressComponent } from './all-users/user-progress/user-progress.component';
 import { TraineesComponent } from './all-users/trainees/trainees.component';
 import { ResetTrainerPasswordComponent } from './all-users/reset-trainer-password/reset-trainer-password.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ResetTrainerPasswordComponent } from './all-users/reset-trainer-passwor
     ReactiveFormsModule,
     NgApexchartsModule,
     MatDialogModule,
+    MatButtonModule,
+    MatMenuModule
   ],
 })
 export class DashboardModule {}

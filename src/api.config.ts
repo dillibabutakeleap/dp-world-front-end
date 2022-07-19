@@ -21,6 +21,7 @@ export const apiConfig = {
     user: '/web-admin/user',
     resetTrainerPassword: '/web-admin/reset-trainer-password',
     progressData: '/progress-data',
+    deleteUser: '/web-admin/remove-user',
   },
   user: {
     user: '/user',
